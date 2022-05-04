@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>SIN 143</title>
+
+		<meta name="description" content="Aulas de SIN143">
+		<meta name="author" content="Clausius Duque Reis">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/league.css" id="theme">
+
+		<style>
+			.fo {
+				color: orange;
+			}
+		</style>
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>SIN 143</h1>
+					<h3>Laboratório de programação</h3>
+					<h3>Aula 02</h3>
+					<h4>Introdução ao HTML</h4>
+					<p>
+						<small>Prof. <a href="mailto://clausius@uv.br">Clausius Reis</a> - LAE 279</small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Antes de começar...</h2>
+					<p class="fragment">Instalar um navegador: <span class="fo">Chrome</span> ou <span class="fo">Firefox</span></p>
+					<p class="fragment">Instalar um editor: <span class="fo">Visual Studio Code</span></p>
+					<p class="fragment">Instalar um servidor: <span class="fo">XAMP / WAMP / LAMP</span></p>
+					<p>
+						<ul class="fragment">
+							<li>Apache (Páginas HTML/Arquivos)</li>
+							<li>Banco de dados (MySQL)</li>
+							<li>PHP (Linguagem server-side)</li>
+						</ul>
+					</p>
+				</section>
+
+				<!-- <section>
+					<section>
+						<h2>Instalando o Chrome</h2>
+						<a href="#" class="navigate-down">
+							<img data-src="./images/a02_GoogleChrome1.png">
+						</a>
+					</section>
+					<section>
+						<a href="#" class="navigate-down">
+							<img data-src="./images/a02_GoogleChrome2.png">
+						</a>
+					</section>
+					<section>
+						<a href="#" class="navigate-down">
+							<img data-src="./images/a02_GoogleChrome3.png">
+						</a>
+					</section>
+					<section>
+						<a href="#" class="navigate-down">
+							<img data-src="./images/a02_GoogleChrome4.png">
+						</a>
+					</section>
+					<section>
+						<a href="#" class="navigate-down">
+							<img data-src="./images/a02_GoogleChrome5.png">
+						</a>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Instalando o Visual Studio Code</h2>
+						<a href="#" class="navigate-down">
+							<img data-src="./images/a02_vsc1.png">
+						</a>
+					</section>
+					<section>
+						<a href="#" class="navigate-down">
+							<img data-src="./images/a02_vsc2.png">
+						</a>
+					</section>					
+					<section>
+						<a href="#" class="navigate-down">
+							<img data-src="./images/a02_vsc3.png">
+						</a>
+					</section>					
+					<section data-background="./images/congratulations.gif">
+						<p><span class="fo">Já podemos programar em HTML!</span></p>
+						<br><br><br><br><br><br><br><br><br><br><br>
+					</section>
+				</section>
+
+				<section>
+					<section data-background="./images/coding.gif">
+						<a href="#" class="navigate-down">
+							<img data-src="./images/homer.gif">
+						</a>
+					</section>
+				</section> -->
+
+				<section>
+					<h2>Introdução ao HTML</h2>			
+					<p>O <span style="color: orange;">HTML</span>, Linguagem de marcação para a World Wide Web, está em sua 5ª versão (HTML5)</p>					
+					<p>Originalmente proposto em <span style="color: orange;">1995</span> (Baseado em trabalho de 1993), vários grupos trabalharam em versões diferentes (XHTML 2.0, HTML 4.01) antes de se unirem no desenvolvimento do HTML5</p>
+					<p><span style="color: orange;">HTML5</span> adicionou elementos para desvincular o uso de certos plugins, como o Flash, applets e players de vídeo</p>
+				</section>
+<span style="color: orange;"></span>
+				<section>
+					<h2>Linguagens de marcação</h2>
+					<p>Definem <span style="color: orange;">formatos, maneiras de exibição e padrões</span> dentro de um documento</p>					
+					<p>Utilizam <span style="color: orange;">Tags</span> para dar algum significado ao conteúdo a ser exibido</p>
+					<p>Outro exemplo de linguagem de marcação é o <span style="color: orange;">XML</span>, que tem foco na estruturação de dados</p>
+				</section>
+
+				<section>
+					<h2>Sintáxe básica HTML</h2>
+					<p class="fragment"><<span style="color: red;">tag</span>>...<<span style="color: red;">/tag</span>></p>
+					<p class="fragment"><<span style="color: red;">tag</span> <span style="color: orange;">atributos</span>>...<<span style="color: red;">/tag</span>></p>
+				</section>
+
+				<section>
+					<h2>Tags HTML</h2>
+					<div style="width: 100%; justify-content: center; align-items: center; display: flex;">
+						<div style="float: left; width: 300px;">
+							<p>Headings</p>
+							<p>Paragraphs</p>
+							<p>Styles</p>							
+						</div>
+						<div style="float: right; width: 300px;">
+							<p>Formatting</p>
+							<p>Comments</p>
+							<p>Colors</p>
+						</div>
+					</div>
+					<br><p style="font-size: 50%;">Fonte dos códigos dessa aula: <a href="https://www.w3schools.com/">www.w3schools.com</a></p>
+				</section>
+
+				<section>
+					<h2>Headings</h2>
+					<p>São títulos ou subtítulos exibidos em uma página Web</p>
+					<img src="images/fig01.png" style="border: none;">
+					<p><a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_headings" target="_blank">Código Exemplo</a></p> 
+				</section>
+
+				<section>
+					<section>
+						<h2>Paragraphs</h2>
+						<p>Um parágrafo sempre inicia uma nova linha, navegadores sempre adicionam um espaço antes e depois de cada parágrafo.</p>
+						<img src="images/fig02.png" style="border: none;">
+					</section>
+
+					<section>
+						<h2>Paragraphs</h2>
+						<p><a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_paragraphs1" target="_blank">Código Exemplo 1</a></p>
+						<p><a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_paragraphs2" target="_blank">Código Exemplo 2</a></p>
+						<p><a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_pre" target="_blank">Código Exemplo 3</a></p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Styles</h2>					
+						<p>Adiciona estilos (Visual) à um elemento, como cor, fonte, tamanho e mais.</p>
+						<img src="images/fig03.png" style="border: none;">
+					</section>
+
+					<section>
+						<h2>Styles</h2>					
+						<p><a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_styles_background-color" target="_blank">Código Exemplo 1</a></p>
+						<p><a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_styles_background-color2" target="_blank">Código Exemplo 2</a></p>
+						<p><a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_styles_color" target="_blank">Código Exemplo 3</a></p>
+						<p><a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_styles_font-family" target="_blank">Código Exemplo 4</a></p>
+					</section>
+				</section>
+
+				<section>
+					<h2>Formatting</h2>
+					<p>Definições de elementos com significados especiais</p>
+
+					<table style="font-size: 15px;">
+						<tbody><tr>
+						<th style="width:20%">Tag</th>
+						<th>Description</th>
+						</tr>
+						<tr>
+						<td><a href="/tags/tag_b.asp">&lt;b&gt;</a></td>
+						<td>Defines bold text</td>
+						</tr>
+						<tr>
+						<td><a href="/tags/tag_em.asp">&lt;em&gt;</a></td>
+						<td>Defines emphasized text&nbsp;</td>
+						</tr>
+						<tr>
+						<td><a href="/tags/tag_i.asp">&lt;i&gt;</a></td>
+						<td>Defines a part of text in an alternate voice or mood</td>
+						</tr>
+						<tr>
+						<td><a href="/tags/tag_small.asp">&lt;small&gt;</a></td>
+						<td>Defines smaller text</td>
+						</tr>
+						<tr>
+						<td><a href="/tags/tag_strong.asp">&lt;strong&gt;</a></td>
+						<td>Defines important text</td>
+						</tr>
+						<tr>
+						<td><a href="/tags/tag_sub.asp">&lt;sub&gt;</a></td>
+						<td>Defines subscripted text</td>
+						</tr>
+						<tr>
+						<td><a href="/tags/tag_sup.asp">&lt;sup&gt;</a></td>
+						<td>Defines superscripted text</td>
+						</tr>
+						<tr>
+						<td><a href="/tags/tag_ins.asp">&lt;ins&gt;</a></td>
+						<td>Defines inserted text</td>
+						</tr>
+						<tr>
+						<td><a href="/tags/tag_del.asp">&lt;del&gt;</a></td>
+						<td>Defines deleted text</td>
+						</tr>
+						<tr>
+						<td><a href="/tags/tag_mark.asp">&lt;mark&gt;</a></td>
+						<td>Defines marked/highlighted text</td>
+						</tr>
+						</tbody></table>
+
+					<p style="font-size: 15px;">* Tabela extraída de <a href="https://www.w3schools.com/">www.w3schools.com</a></p>
+
+					<p><a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_formatting_intro" target="_blank">Código Exemplo 1</a></p>
+				</section>
+
+				<section>
+					<h2>Comments</h2>
+					<p>Comentários são ignorados pelo navegador, porém aparecem no código fonte.</p>
+					<img src="images/fig04.png" style="border: none;">
+					<p><a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_comment" target="_blank">Código Exemplo 1</a></p>
+				</section>
+
+				<section>
+					<h2>Comments</h2>
+					<pre class="fragment">
+// Dear maintainer:
+// 
+// Once you are done trying to 'optimize' this routine,
+// and have realized what a terrible mistake that was,
+// please increment the following counter as a warning
+// to the next guy:
+// 
+// total_hours_wasted_here = 42</pre>
+					<pre class="fragment">stop(); // Hammertime!</pre>
+				</section>
+
+				<section>
+					<h2>Colors</h2>
+					<p>Definição das cores dos elementos da página</p>
+					<img src="images/fig05.png" style="border: none;">
+					<p><a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_color_names" target="_blank">Código Exemplo 1</a></p>
+					<p><a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_color_values" target="_blank">Código Exemplo 2</a></p>
+				</section>
+
+				<section>
+					<h2>Próxima aula</h2>
+					<p class="fragment">Mais tags HTML...</p>
+				</section>
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--#####################################################################################################-->
+<!--#####################################################################################################-->
+<!--### DAQUI PRÁ FRENTE NÃO MODIFICAR ##################################################################-->
+<!--#####################################################################################################-->
+<!--#####################################################################################################-->
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

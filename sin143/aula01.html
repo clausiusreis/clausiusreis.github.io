@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>SIN 143</title>
+
+		<meta name="description" content="Aulas de SIN143">
+		<meta name="author" content="Clausius Duque Reis">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>SIN 143</h1>
+					<h3>Laboratório de programação</h3>
+					<h3>Aula 01</h3>
+					<h4>Introdução ao desenvolvimento WEB</h4>
+					<p>
+						<small>Prof. <a href="mailto://clausius@uv.br">Clausius Reis</a> - LAE 279</small>
+					</p>
+				</section>
+
+				<section>
+					<h2>SIN 143 - Informações e horários</h2>
+					<div style="text-align: left; border: solid 1px none; padding: 10px;">
+						<p><strong>Semestre:</strong> Primeiro semestre</p>
+						<p><strong>Ano:</strong> 2022</p>
+						<p><strong>Pré-requisitos</strong></p>
+						<ul>
+							<li>SIN 141 - Computação Orientada a Objetos</li>
+							<li>SIN 220 - Banco de Dados</li>
+						</ul>
+						<p><strong>Carga horária:</strong> 60 horas (30 teóricas e 30 práticas)</p>
+					</div>
+				</section>
+
+				<section>
+					<h2>SIN 143 - Informações e horários</h2>
+					<div style="text-align: left; border: solid 1px none; padding: 10px;">
+						<p><strong>Horários:</strong></p>
+						<p>
+							<ul>
+								<li>Segunda-feira: 21h00-22h40 - PVA 227 (Lab)</li>
+								<li>Quinta-feira: 19h00-20h40 - PVA 228</li>
+							</ul>
+						</p>
+					</div>
+				</section>
+
+				<section>
+					<h2>SIN 143 - Informações e horários</h2>
+					<ul>
+						<li>Aulas presenciais (acabou a vida de youtuber)</li>
+						<li>Conteúdo e tarefas na página do PVANet Moodle</li>
+					</ul>					
+				</section>
+
+				<section>
+					<h2>Objetivos (Geral):</h2>
+					<!-- <div style="text-align: left; border: solid 1px orange; padding: 10px;"> -->
+					<div>
+						<p>Capacitar o aluno no desenvolvimento de aplicações, envolvendo a pratica de conceitos de programação WEB, orientação à objetos, uso de banco de dados relacional e elaboração de projeto de sites web dinâmicos.</p>
+					</div>
+				</section>
+
+				<section>
+					<h2>Objetivos (Específicos):</h2>
+					<div style="text-align: left; border: solid 1px none; padding: 10px;">						
+						<p>
+							<ul>
+								<li>Conhecer novas tecnologias em linguagens de programação web;</li>
+								<li>Elaborar modelo conceitual de banco de dados;</li>
+								<li>Entender o modelo MVC e arquitetura Cliente-Servidor;</li>
+								<li>Aplicar os conhecimentos de Orientação à Objetos em programação web.</li>
+							</ul>
+						</p>
+					</div>
+				</section>
+
+				<section>
+					<section>
+						<h2>Conteúdo da disciplina:</h2>
+						<div style="text-align: left; border: solid 1px none; padding: 10px;">						
+							<p>
+								<ul>
+									<li><strong>Parte 1 - Orientações da disciplina</strong></li>
+									<ul>
+										<li>Introdução à programação para web e programação distribuída</li>
+										<li>Modelo de programação Cliente-Servidor</li>
+									</ul>
+								</ul>
+							</p>
+						</div>
+					</section>
+
+					<section>
+						<h2>Conteúdo da disciplina:</h2>
+						<div style="text-align: left; border: solid 1px none; padding: 10px;">						
+							<p>
+								<ul>
+									<li><strong>Parte 2 - Web estática</strong></li>
+									<ul>
+										<li>HTML / HTML5</li>
+										<li>CSS / CSS3</li>
+										<li>Javascript</li>
+										<ul>
+											<li>Jquery</li>
+										</ul>										
+									</ul>
+								</ul>
+							</p>
+						</div>
+					</section>
+
+					<section>
+						<h2>Conteúdo da disciplina:</h2>
+						<div style="text-align: left; border: solid 1px none; padding: 10px;">						
+							<p>
+								<ul>
+									<li><strong>Parte 3 - Web dinâmica</strong></li>
+									<ul>
+										<li>Servidores (Apache, PHP, MySQL)</li>
+										<li>PHP / Funções PHP</li>
+										<li>Orientação à objetos em PHP</li>
+									</ul>
+								</ul>
+							</p>
+						</div>
+					</section>
+
+					<section>
+						<h2>Conteúdo da disciplina:</h2>
+						<div style="text-align: left; border: solid 1px none; padding: 10px;">						
+							<p>
+								<ul>
+									<li><strong>Parte 4 - Banco de dados</strong></li>
+									<ul>
+										<li>Servidor de banco de dados MySQL</li>
+										<li>Comandos SQL</li>
+									</ul>
+								</ul>
+							</p>
+						</div>
+					</section>
+
+					<section>
+						<h2>Conteúdo da disciplina:</h2>
+						<div style="text-align: left; border: solid 1px none; padding: 10px;">						
+							<p>
+								<ul>
+									<li><strong>Parte 5 - Comunicação assíncrona</strong></li>
+									<ul>
+										<li>Uso do JQuery para criar comunicação assíncrona com a web. (Entre outras tecnologias)</li>
+									</ul>
+								</ul>
+							</p>
+						</div>
+					</section>
+
+					<section>
+						<h2>Conteúdo da disciplina:</h2>
+						<div style="text-align: left; border: solid 1px none; padding: 10px;">						
+							<p>
+								<ul>
+									<li><strong>Parte 6 - Projetos práticos</strong></li>
+									<ul>
+										<li>Projeto prático aplicando os conceitos aprendidos na disciplina</li>
+										<li>Criação de um sistema completo para web com conteúdo dinâmico e acesso à banco de dados</li>
+									</ul>
+								</ul>
+							</p>
+						</div>
+					</section>
+				</section>
+
+				<section>
+					<h2>Método de ensino:</h2>
+					<div style="text-align: left; border: solid 1px none; padding: 10px;">						
+						<p>
+							<ul>
+								<li>Aulas Presenciais</li>
+								<li>Pesquisa em livros, artigos acadêmicos e tutoriais disponíveis na Web</li>
+								<li>Exercícios práticos desenvolvidos sobre o conteúdo visto na semana</li>								
+								<li>Projetos práticos aplicando os conteúdos vistos em aula</li>
+							</ul>
+						</p>
+					</div>
+				</section>
+
+				<section>
+					<h2>Avaliação:</h2>
+					<div style="text-align: left; border: solid 1px none; padding: 10px;">						
+						<p>
+							<ul>
+								<li>Avaliações serão feitas na forma de</li>
+								<ul>
+									<li>Trabalhos sobre os conteúdos vistos</li>
+									<ul>
+										<li>60 pontos distribuídos entre as aulas práticas</li>
+									</ul>
+									<li>Projetos sobre tema a ser definido</li>
+									<ul>
+										<li>40 pontos de projetos</li>
+									</ul>
+								</ul>
+								<li>Nota final = Soma dos trabalhos + projetos</li>
+							</ul>
+						</p>
+					</div>
+				</section>
+
+				<section>
+					<h2>Avaliação:</h2>
+					<div style="text-align: left; border: solid 1px none; padding: 10px;">						
+						<p>
+							<ul>
+								<li>As avaliações dos trabalhos e projetos serão feitas de acordo com requisitos definidos na descrição dos mesmos</li>
+							</ul>
+						</p>
+					</div>
+				</section>
+
+				<section>
+					<h2>Frequência:</h2>
+					<div style="text-align: left; border: solid 1px none; padding: 10px;">						
+						<p>
+							<ul>
+								<li>O limite de faltas é 25% do total de aulas (T/P)</li>
+								<li>O aluno que ultrapassar esse limite estará reprovado por faltas (conceito L)</li>
+							</ul>
+						</p>
+					</div>
+				</section>
+
+				<section>
+					<h2>Plágio:</h2>
+					<div style="text-align: left; border: solid 1px none; padding: 10px;">						
+						<p>
+							<ul>
+								<li>O plágio em trabalhos serão punidos com nota zero no trabalho:</li>
+								<ul>
+									<li>Ou até mesmo nota zero na disciplina dependendo da extensão do plágio</li>
+									<li>O <span style="color: orange;">PLÁGIO</span> consiste, basicamente, na cópia de textos completos, trechos de texto ou textos baseados em outros textos sem citar a fonte</li>
+								</ul>
+							</ul>
+						</p>
+					</div>
+				</section>
+
+
+				<section>
+					<h1>...ok, vamos começar?</h1>
+				</section>
+
+				<section>
+					<h2>Entendendo a diferença entre as tecnologias básicas.</h2>
+					<p class="fragment">HTML/HTML5</p>
+					<p class="fragment">CSS/CSS3</p>
+					<p class="fragment">Javascript</p>
+				</section>
+
+				<section>
+					<h2>HTML/HTML5</h2>
+					<ul>
+						<li class="fragment">HTML significa Hyper Text Markup Language</li>
+						<li class="fragment">É a linguagem de marcação padrão para o desenvolvimento de páginas WEB</li>
+						<li class="fragment">Descreve a estrutura de uma página WEB</li>
+						<li class="fragment">Consiste em uma série de elemento que informam ao browser como o conteúdo deve ser exibido na tela:
+							(Caixas de texto, Botões, Imagens, Containers, Fórmulários, Listas, Etc.)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Papel do CSS</h2>
+					<ul>
+						<li class="fragment">Definição do estilo (Visual) de um documento HTML</li>
+						<li class="fragment">Tamanho e cores dos elementos da página</li>
+						<li class="fragment">Posicionamento dos containers (DIV) na página</li>
+						<li class="fragment">Ações por interação com elementos da página</li>
+						<li class="fragment">Economiza muito tempo, uma vez que pode controlar o layout de múltiplas páginas</li>
+					</ul>
+					<p class="fragment"><a href="https://www.w3schools.com/css/demo_default.htm" target="_blank">Exemplo do efeito do CSS sobre uma página.</a></p>
+				</section>
+
+				<section>
+					<h2>Papel do Javascript</h2>
+					<ul>
+						<li class="fragment">Javascript é a linguagem de programação utilizada para interagir com o código HTML</li>
+						<li class="fragment">Responsável por:</li>
+						<ul>
+							<li class="fragment">Preenchimento e alteração dinâmica dos componentes HTML</li>
+							<li class="fragment">Validação de dados</li>
+							<li class="fragment">Comportamento da página</li>
+							<li class="fragment">A "Programação" efetivamente falando...</li>
+						</ul>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>Plugin excelente para testar o funcionamento dos sites.</h2>
+						<p>Chrome Web Store: Web developer</p>
+						<p class="fragment">Demonstração...</p>
+					</section>
+					<section>
+						<a href="#" class="navigate-down">
+							<img data-src="./images/a01_webdeveloper.png">
+						</a>
+					</section>
+					<section>
+						<p>Façamos uma análise em alguns sites</p>
+						<ul>
+							<li><a href="https://www.ufv.br" target="_blank">UFV</a></li>
+							<li><a href="http://www.terra.com.br" target="_blank">Portal Terra</a></li>
+							<li><a href="https://store.steampowered.com/" target="_blank">Steam</a></li>
+						</ul>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Front-end vs Back-end</h2>
+					</section>
+
+					<section>
+						<h2>Front-end</h2>
+						<p>Tecnologias que rodam no cliente (Browser)</p>
+						<p>CSS, HTML, Javascript</p>
+						<a href="#" class="navigate-down">
+							<img width="600" height="300" data-src="./images/cliente.jpg">
+						</a>
+					</section>
+
+					<section>
+						<h2>Back-end</h2>
+						<p>Tecnologias que rodam no servidor</p>
+						<p>O conteúdo é gerado dinamicamente</p>
+						<a href="#" class="navigate-down">
+							<img width="600" height="300" data-src="./images/servidor.jpg">
+						</a>
+					</section>
+					
+					<section>
+						<h2>Arquitetura cliente-servidor</h2>
+						<a href="#" class="navigate-down">
+							<img width="110%" height="110%" data-src="./images/clientserver.jpg">
+						</a>
+					</section>
+
+					<section>
+						<h2>Arquitetura cliente-servidor</h2>
+						<a href="#" class="navigate-down">
+							<img width="100%" height="100%" data-src="./images/clientserver1.jpg">
+						</a>
+					</section>
+				</section>
+
+				<!-- <section>
+						<h2>Tecnologias Back-end</h2>
+						<p class="fragment">Tecnologias back-end geralmente armazenam informações dos usuários</p>
+						<p class="fragment">Suportam sites mais complexos</p>						
+						<p class="fragment">Dados de visitas a cada área de um site podem ser armazenados</p>
+						<p class="fragment">Essa informação pode ser utilizada pela empresa para melhorar o serviço ou vendas</p>						
+				</section> -->
+
+				<section>
+					<h2>Qual a importância de saber HTML/CSS/Javascript?</h2>
+					<p class="fragment">Com tantas ferramentas para o desenvolvimento automático de páginas WEB e até sistemas, porquê preciso aprender HTML/CSS/Javascript?</p>
+					<p class="fragment">Para o usuário básico talvez não seja importante, mas para nós...hehehe!</p>					
+				</section>
+
+				<section>
+					<p>HTML, CSS e Javascript (entre outras)<br>é o que move a WEB</p>
+					<p class="fragment">Sistemas prontos tem limitações, estão fadados a entregar o mesmo resultado</p>
+					<p class="fragment">Saber HTML/CSS/Javascript permite personalizar os sites para um perfil desejado, otimizar o carregamento e reduzir a geração de código redundante</p>
+				</section>
+
+				<section>
+					<h3>Como linguagens de marcação diferem em relação à outras linguagens de programação?</h3>
+					<p class="fragment">HTML é uma linguagem de marcação (Estrutura)</p>
+					<p class="fragment">CSS é uma linguagem de estilos (Visual)</p>
+					<p class="fragment">Ambas não tem uma lógica por trás</p>
+				</section>
+
+
+				<!-- <section>
+					<h3>Introdução ao HTML</h3>
+					<p class="fragment">HTML é um documento texto simples</p>
+					<p class="fragment">O que for colocado no texto é interpretado em tempo de execução pelo browser</p>
+					<pre class="fragment"><code class="html" contenteditable>
+&lt;html&gt;
+    &lt;head&gt; -->
+        <!--Informações iniciais-->
+    <!-- &lt;/head&gt;
+    &lt;body&gt; -->
+        <!--Conteúdo do site-->
+    <!-- &lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+				</section>
+
+				<section data-background="./images/uau.gif">
+					<p style="color: black"><strong>Senta que lá vem código!!!</strong></p>
+				</section>
+				
+				<section>
+					<h2>Entenderam tudo?</h2>
+					<p>Exercício valendo ponto agora?</p>				
+				</section>
+
+				<section data-background="./images/groundhog.gif">
+					<h2>Não?</h2>
+				</section> -->
+
+				<section>
+					<h2>Próxima aula</h2>
+					<p class="fragment">Introdução ao HTML</p>
+				</section>
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--#####################################################################################################-->
+<!--#####################################################################################################-->
+<!--### DAQUI PRÁ FRENTE NÃO MODIFICAR ##################################################################-->
+<!--#####################################################################################################-->
+<!--#####################################################################################################-->
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

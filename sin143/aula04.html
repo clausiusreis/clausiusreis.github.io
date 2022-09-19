@@ -1,0 +1,1205 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>SIN 143</title>
+
+	<meta name="description" content="Aulas de SIN143">
+	<meta name="author" content="Clausius Duque Reis">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/league.css" id="theme">
+
+	<style>
+		.fontOrange {
+			color: orange;
+		}
+
+		.code {
+			background-color: white; 
+			text-align: left; 
+			padding: 5px; 
+			border-radius: 10px; 
+			font-size: .5em; 
+			font-family: Consolas, 'Courier New';
+		}
+
+		.table {				
+			background-color: #444; 
+			text-align: left; 
+			padding: 5px; 
+			border-radius: 10px; 
+			font-size: .5em; 
+			font-family: Consolas, 'Courier New';
+			width: 80%;
+		}
+	</style>
+
+
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+	<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section>
+				<h1>SIN 143</h1>
+				<h3>Laboratório de programação</h3>
+				<h3>Aula 06</h3>
+				<h4>Javascript</h4>
+				<p>
+					<small>Prof. <a href="mailto://clausius@uv.br">Clausius Reis</a> (clausius@ufv.br) - LAE 279</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Javascript</h2>
+				<p>O que é o Javascript?</p>
+				<p>O que o Javascript pode fazer?</p>
+				<p>Onde inserir código Javascript?</p>
+				<p>Possíveis saídas</p>
+				<p>Sintaxe</p>
+				<br>
+				<p style="font-size: 50%;">Fonte dos códigos dessa aula: <a
+						href="https://www.w3schools.com/">www.w3schools.com</a></p>
+			</section>
+
+			<section>
+				<h2>Javascript</h2>
+				<p>Comentários</p>
+				<p>Variáveis</p>
+				<p>Aritmética</p>
+				<p>Atribuição</p>
+				<br>
+				<p style="font-size: 50%;">Fonte dos códigos dessa aula: <a
+						href="https://www.w3schools.com/">www.w3schools.com</a></p>
+			</section>
+
+			<section>
+				<h2>O que é Javascript?</h2>
+				<p>Linguagem de programação que torna possível implementar comportamentos complexos em páginas web.
+					É capaz de tornar conteúdos atualizáveis em intervalos de tempo, mapas interativos,
+					gráficos 2D e 3D animados, entre muitas outras aplicações.</p>
+
+				<p>É uma dos três pilares do desenvolvimento web, sendo peça fundamental de tecnologias atuais que
+					se tornaram padrão o mercado.</p>
+			</section>
+
+			<section>
+				<h2>O que o Javascript pode fazer?</h2>
+				<ul>
+					<li>Alterar conteúdo HTML de elementos</li>
+					<li>Alterar valores de atributos</li>
+					<li>Alterar estilos HTML</li>
+					<li>Esconde/Exibir elementos HTML</li>
+					<li>Manipulação de dados</li>
+					<li>Lógica da página</li>
+					<li>Entre muitas outras possibilidades...</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Onde inserir código Javascript?</h2>
+				<p>Dentro das tags <span style="color:orange;">&lt;script&gt;...&lt;/script&gt;</span></p>
+				<p>Em um arquivo externo com o atributo src em <span style="color:orange;">&lt;script&gt;</span><br>
+					<span style="color:orange;">&lt;script</span> src="MyScript.js" <span
+						style="color:orange;">&gt;...&lt;/script&gt;</span>
+				</p>
+				<p>&nbsp;</p>
+				<p>Podem ser inseridas em qualquer lugar do código, mas é importante ficar atendo às boas práticas de
+					programação.</p>
+			</section>
+
+			<section>
+				<h2>Possíveis saídas</h2>
+				<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_output_dom"
+						target="_blank">innerHTML</a></p>
+				<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_output_write"
+						target="_blank">document.write() enquanto HTML é carregado</a></p>
+				<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_output_write_over"
+						target="_blank">document.write() depois de carregar o HTML</a></p>
+			</section>
+
+			<section>
+				<h2>Sintaxe</h2>
+				<table>
+					<tr>
+						<td>Variáveis</td>
+						<td>var x;</td>
+					</tr>
+					<tr>
+						<td>Operadores</td>
+						<td>+ - * / =</td>
+					</tr>
+					<tr>
+						<td>Expressões</td>
+						<td>
+							5 * 10<br>
+							x * 10<br>
+							"John" + " " + "Doe"
+						</td>
+					</tr>
+					<tr>
+						<td>Comentários</td>
+						<td>//<br>/* ... */</td>
+					</tr>
+					<tr>
+						<td>Identificadores</td>
+						<td>Primeiro caracter deve ser uma letra, _ (underscore) ou $ (dólar)</td>
+					</tr>
+				</table>
+
+			</section>
+
+			<section>
+				<h2>Comentários</h2>
+				<p>// ou /* ... */</p>
+				<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comments1" target="_blank">Exemplo
+						1</a></p>
+				<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comments2" target="_blank">Exemplo
+						2</a></p>
+
+			</section>
+
+			<section>
+				<h2>Variáveis</h2>
+				<p>Antes de 2015, <span style="color:orange;">var</span> era a única forma de declarar varáveis, agora
+					também
+					podemos utilizar <span style="color:orange;">const</span> para variáveis que não podem ser
+					alteradas,
+					e <span style="color:orange;">let</span> para variáveis com escopo restrito (private).</p>				
+			</section>
+
+			<section>
+				<h2>Aritmética</h2>
+				<table style="font-size: .75em;">
+					<tr>
+						<td>Adição</td>
+						<td>+</td>
+					</tr>
+					<tr>
+						<td>Subtração</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>Multiplicação</td>
+						<td>*</td>
+					</tr>
+					<tr>
+						<td>Exponenciação</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td>Divisão</td>
+						<td>/</td>
+					</tr>
+					<tr>
+						<td>Módulo (Resto)</td>
+						<td>%</td>
+					</tr>
+					<tr>
+						<td>Incremento</td>
+						<td>++</td>
+					</tr>
+					<tr>
+						<td>Decremento</td>
+						<td>--</td>
+					</tr>
+					<tr>
+						<td>Expressões</td>
+						<td>(5 * 10) / 2</td>
+					</tr>
+				</table>
+				<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_arithmetic_expressions" target="_blank">Teste</a></p>
+			</section>
+
+			<section>
+				<h2>Atribuição</h2>
+				<table style="font-size: .5em;">
+					<tr>
+						<td>Descrição</td>
+						<th style="width:25%">Operator</th>
+						<th>Example</th>
+						<th>Same As</th>
+					</tr>
+					<tr>
+						<td>Atribuição</td>
+						<td>=</td>
+						<td>x = y</td>
+						<td>x = y</td>
+					</tr>
+					<tr>
+						<td>Adição</td>
+						<td>+=</td>
+						<td>x += y</td>
+						<td>x = x + y</td>
+					</tr>
+					<tr>
+						<td>Subtração</td>
+						<td>-=</td>
+						<td>x -= y</td>
+						<td>x = x - y</td>
+					</tr>
+					<tr>
+						<td>Multiplicação</td>
+						<td>*=</td>
+						<td>x *= y</td>
+						<td>x = x * y</td>
+					</tr>
+					<tr>
+						<td>Divisão</td>
+						<td>/=</td>
+						<td>x /= y</td>
+						<td>x = x / y</td>
+					</tr>
+					<tr>
+						<td>Resto</td>
+						<td>%=</td>
+						<td>x %= y</td>
+						<td>x = x % y</td>
+					</tr>
+					<tr>
+						<td>Bit a bit, desloc. esq.</td>
+						<td>&lt;&lt;=</td>
+						<td>x &lt;&lt;= y</td>
+						<td>x = x &lt;&lt; y</td>
+					</tr>
+					<tr>
+						<td>Bit a bit, desloc. dir.</td>
+						<td>&gt;&gt;=</td>
+						<td>x &gt;&gt;= y</td>
+						<td>x = x &gt;&gt; y</td>
+					</tr>
+					<tr>
+						<td>Bit a bit, desloc. dir. unsigned</td>
+						<td>&gt;&gt;&gt;=</td>
+						<td>x &gt;&gt;&gt;= y</td>
+						<td>x = x &gt;&gt;&gt; y</td>
+					</tr>
+					<tr>
+						<td>AND bit a bit</td>
+						<td>&amp;=</td>
+						<td>x &amp;= y</td>
+						<td>x = x &amp; y</td>
+					</tr>
+					<tr>
+						<td>XOR bit a bit</td>
+						<td>^=</td>
+						<td>x ^= y</td>
+						<td>x = x ^ y</td>
+					</tr>
+					<tr>
+						<td>OR bit a bit</td>
+						<td>|=</td>
+						<td>x |= y</td>
+						<td>x = x | y</td>
+					</tr>
+					<tr>
+						<td>Exponencial</td>
+						<td>**=</td>
+						<td>x **= y</td>
+						<td>x = x ** y</td>
+					</tr>
+				</table>
+				<p><a href="https://www.w3schools.com/js/js_assignment.asp" target="_blank">Exemplos no site do <span style="color:orange;">w3schools</span></a></p>				
+			</section>
+
+			<section>
+				<h2>Mais funções Javascript</h2>					
+				<p>Tipos de dados</p>
+				<p>Objetos</p>
+				<p>Funções</p>
+				<br><p style="font-size: 50%;">Fonte dos códigos dessa aula: <a href="https://www.w3schools.com/">www.w3schools.com</a></p>
+			</section>
+
+			<section>
+				<h2>Javascript</h2>
+				<p>Eventos</p>
+				<p>Strings e String Methods</p>
+				<p>Numbers e Number Methods</p>					
+				<br><p style="font-size: 50%;">Fonte dos códigos dessa aula: <a href="https://www.w3schools.com/">www.w3schools.com</a></p>
+			</section>
+
+			<section>
+				<h2>Tipos de dados</h2>
+				<p>Javascript pode receber diversos tipos de dados</p>
+				<div class="code"><span class="jscolor" style="color:black">
+					<span class="jskeywordcolor" style="color:mediumblue">var</span> length = <span class="jsnumbercolor" style="color:red">16</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="commentcolor" style="color:green">// Number<br></span>
+					<span class="jskeywordcolor" style="color:mediumblue">var</span> lastName = <span class="jsstringcolor" style="color:brown">"Johnson"</span>;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="commentcolor" style="color:green">// String<br></span><span class="jsnumbercolor" style="color:red">
+					</span>  <span class="jskeywordcolor" style="color:mediumblue">var</span> <span class="jsnumbercolor" style="color:red">
+					</span> x = {firstName:<span class="jsstringcolor" style="color:brown">"John"</span>, lastName:<span class="jsstringcolor" style="color:brown">"Doe"</span>};&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="commentcolor" style="color:green">// Object
+				</span></span></div>
+				<font size="6em;">
+					<table>
+						<tr>
+							<td>
+								<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_datatypes_addstring" target="_blank">Exemplo 1: <span style="color:orange">16 + "Volvo"</span></a></p>
+								<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_datatypes_addstrings_1" target="_blank">Exemplo 2: <span style="color:orange">16 + 4 + "Volvo"</span></a></p>
+								<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_datatypes_dynamic" target="_blank">Exemplo 3: <span style="color:orange">Atribuição dinâmica</span></a></p>
+								<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_datatypes_numbers_large" target="_blank">Exemplo 4: <span style="color:orange">Números grandes</span></a></p>
+							</td>
+							<td>									
+								<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_datatypes_array" target="_blank">Exemplo 5: <span style="color:orange">Arrays</span></a></p>
+								<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_datatypes_object" target="_blank">Exemplo 6: <span style="color:orange">Objetos</span></a></p>
+								<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_datatypes_typeof_primitive" target="_blank">Exemplo 7: <span style="color:orange">typeof (Primitive)</span></a></p>
+								<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_datatypes_typeof_complex" target="_blank">Exemplo 8: <span style="color:orange">typeof (Complex)</span></a></p>
+							</td>
+						</tr>
+					</table>
+				</font>
+			</section>
+
+			<section>
+				<h2>Objetos</h2>
+				<table class="table">
+					<tr>
+						<th style="width:20%">Property</th>
+						<th>Property Value</th>
+					</tr>
+					<tr>
+						<td>firstName</td>
+						<td>John</td>
+					</tr>
+					<tr>
+						<td>lastName</td>
+						<td>Doe</td>
+					</tr>
+					<tr>
+						<td>age</td>
+						<td>50</td>
+					</tr>
+					<tr>
+						<td>eyeColor</td>
+						<td>blue</td>
+					</tr>
+					<tr>
+						<td>fullName</td>
+						<td>function() {return this.firstName + " " + this.lastName;}</td>
+					</tr>
+				</table>
+				<font size="6em;">
+					<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_objects_create_1" target="_blank">Exemplo 1: <span style="color:orange">Simple object</span></a></p>
+					<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_objects_properties_2" target="_blank">Exemplo 3: <span style="color:orange">Accessing properties</span></a></p>
+					<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_objects_method" target="_blank">Exemplo 3: <span style="color:orange">Object methods</span></a></p>
+				</font>
+			</section>
+
+			<section>
+				<h2>Funções</h2>
+				<font size="6em;">
+					<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_return" target="_blank">Exemplo 1: <span style="color:orange">Basic function</span></a></p>
+					<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_farenheit_to_celsius" target="_blank">Exemplo 2: <span style="color:orange">Parâmetros</span></a></p>
+					<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_farenheit_to_celsius_2" target="_blank">Exemplo 3: <span style="color:orange">() invoca a função</span></a></p>
+					<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_function_scope" target="_blank">Exemplo 4: <span style="color:orange">Variáveis locais</span></a></p>
+				</font>
+			</section>
+
+			<section>
+				<h2>Eventos</h2>
+				<font size="6em;">
+					<p>Alguns exemplos de eventos que ocorrem no HTML:</p>
+
+					<table class="table">
+						<tbody><tr>
+						  <th>Event</th>
+						  <th>Description</th>
+						</tr>
+						<tr>
+						  <td>onchange</td>
+						  <td>An HTML element has been changed</td>
+						</tr>
+						<tr>
+						  <td>onclick</td>
+						  <td>The user clicks an HTML element</td>
+						</tr>
+						<tr>
+						  <td>onmouseover</td>
+						  <td>The user moves the mouse over an HTML element</td>
+						</tr>
+						<tr>
+						  <td>onmouseout</td>
+						  <td>The user moves the mouse away from an HTML element</td>
+						</tr>
+						<tr>
+						  <td>onkeydown</td>
+						  <td>The user pushes a keyboard key</td>
+						</tr>
+						<tr>
+						  <td>onload</td>
+						  <td>The browser has finished loading the page</td>
+						</tr>
+						</tbody></table>
+					
+					<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_event_onclick1" target="_blank">Exemplo 1: <span style="color:orange">Botão 1</span></a></p>
+					<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_event_onclick" target="_blank">Exemplo 2: <span style="color:orange">Botão 2</span></a></p>
+					<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_events1" target="_blank">Exemplo 3: <span style="color:orange">Botão 3</span></a></p>
+				</font>
+			</section>
+
+			<section>
+				<h2>Strings e String Methods</h2>
+				<font size="6em;">
+					<p>Variáveis do tipo string são criadas colocando aspas duplas ou simples ao redor de um texto</p>
+					<p>Aspas podem ser utilizadas no texto desde que não coincidam com as que o esteja rodeando</p>
+				</font>
+			</section>
+
+			<section>
+				<h2>Strings e String Methods</h2>
+				<font size="6em;">
+					<p>Caracteres de escape podem ser utilizados:
+						<table class="table">
+							<tr>
+								<th width="25%">Code</th>
+								<th>Result</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>\'</td>
+								<td>'</td>
+								<td>Single quote</td>
+							</tr>
+							<tr>
+								<td>\"</td>
+								<td>"</td>
+								<td>Double quote</td>
+							</tr>
+							<tr>
+								<td>\\</td>
+								<td>\</td>
+								<td>Backslash</td>
+							</tr>
+						</table>
+					</p>
+
+					<p>Também são aceitos comandos de escape:
+						<table class="table">
+							<tr>
+								<th width="25%">Code</th>
+								<th>Result</th>
+							</tr>
+							<tr>
+								<td>\b</td>
+								<td>Backspace</td>
+							</tr>
+							<tr>
+								<td>\f</td>
+								<td>Form Feed</td>
+							</tr>
+							<tr>
+								<td>\n</td>
+								<td>New Line</td>
+							</tr>
+							<tr>
+								<td>\r</td>
+								<td>Carriage Return</td>
+							</tr>
+							<tr>
+								<td>\t</td>
+								<td>Horizontal Tabulator</td>
+							</tr>
+							<tr>
+								<td>\v</td>
+								<td>Vertical Tabulator</td>
+							</tr>
+						</table>
+					</p>
+
+				</font>
+			</section>
+
+			<section>
+				<h2>Strings e String Methods</h2>
+				<font size="6em;">
+					<p>Métodos e propriedades das strings:
+						<table class="table">
+							<tr>
+								<th>Descrição</th>
+								<th>Comando</th>
+								<th>Exemplo</th>
+							</tr>
+							<tr>
+								<td>String Length</td>
+								<td>length;</td>
+								<td><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_length" target="_blank">Exemplo 1</a></td>
+							</tr>
+							<tr>
+								<td>Finding a String in a String</td>
+								<td>indexOf();<br>lastIndexOf();</td>
+								<td>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_indexof" target="_blank">Exemplo 1</a><br>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_lastindexof" target="_blank">Exemplo 2</a><br>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_indexof_1" target="_blank">Exemplo 3</a><br>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_lastindexof_2" target="_blank">Exemplo 4</a>
+								</td>
+							</tr>
+							<tr>
+								<td>Searching for a String in a String</td>
+								<td>search();</td>
+								<td>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_search_locate" target="_blank">Exemplo 1</a>
+								</td>
+							</tr>
+							<tr>
+								<td>Extract part of a substring</td>
+								<td>slice();<br>substring();</td>
+								<td>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_slice" target="_blank">Exemplo 1</a><br>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_substr" target="_blank">Exemplo 2</a>
+								</td>
+							</tr>
+							<tr>
+								<td>Replace strings of a substring</td>
+								<td>replace();</td>
+								<td>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_replace_first" target="_blank">Exemplo 1</a><br>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_replace_case" target="_blank">Exemplo 2</a><br>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_replace_insensitive" target="_blank">Exemplo 3</a><br>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_replace_global" target="_blank">Exemplo 4</a>
+								</td>
+							</tr>
+							<tr>
+								<td>Convertento maiúsculas e minúsculas</td>
+								<td>toUpperCase();<br>toLowerCase();</td>
+								<td>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_toupper" target="_blank">Exemplo 1</a><br>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_tolower" target="_blank">Exemplo 2</a>
+								</td>
+							</tr>
+						</table>
+					</p>
+
+				</font>
+			</section>
+
+			<section>
+				<h2>Strings e String Methods</h2>
+				<font size="6em;">
+					<p>Métodos e propriedades das strings:
+						<table class="table">
+							<tr>
+								<th>Descrição</th>
+								<th>Comando</th>
+								<th>Exemplo</th>
+							</tr>
+							<tr>
+								<td>Concatenar strings</td>
+								<td>concat();</td>
+								<td><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_concat" target="_blank">Exemplo 1</a></td>
+							</tr>
+							<tr>
+								<td>Removendo espaços em uma string</td>
+								<td>trim();</td>
+								<td>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_trim" target="_blank">Exemplo 1</a><br>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_trim_regexp" target="_blank">Exemplo 2</a><br>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_indexof_1" target="_blank">Exemplo 3</a><br>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_lastindexof_2" target="_blank">Exemplo 4</a>
+								</td>
+							</tr>
+							<tr>
+								<td>Retornar um caracter na posição específica</td>
+								<td>charAt();<br>charCodeAt();</td>
+								<td>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_charat" target="_blank">Exemplo 1</a><br>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_charcodeat" target="_blank">Exemplo 2</a><br>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_prop" target="_blank">Exemplo 3</a>
+								</td>
+							</tr>
+							<tr>
+								<td>Convertendo uma string em um array</td>
+								<td>split();</td>
+								<td>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_split" target="_blank">Exemplo 1</a><br>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_split_char" target="_blank">Exemplo 2</a>
+								</td>
+							</tr>
+						</table>
+					</p>
+
+				</font>
+			</section>
+
+
+			<section>
+				<h2>Numbers e Number Methods</h2>
+				<font size="6em;">
+					<p>Métodos e propriedades dos numbers:
+						<table class="table">
+							<tr>
+								<th>Descrição</th>
+								<th>Comando</th>
+								<th style="width:100px;">Exemplo</th>
+							</tr>
+							<tr>
+								<td>Retorna um número como uma string</td>
+								<td>toString();</td>
+								<td>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_number_tostring" target="_blank">Exemplo 1</a>
+								</td>
+							</tr>
+							<tr>
+								<td>Retorna número em notação exponencial</td>
+								<td>toExponential();</td>
+								<td>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_number_toexponential" target="_blank">Exemplo 1</a>
+								</td>
+							</tr>
+							<tr>
+								<td>Retorna número com número fixo de decimais</td>
+								<td>toFixed();</td>
+								<td>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_number_tofixed" target="_blank">Exemplo 1</a>
+								</td>
+							</tr>
+							<tr>
+								<td>Retorna uma string com um número específico de caracteres numéricos</td>
+								<td>toPrecision();</td>
+								<td>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_number_toprecision" target="_blank">Exemplo 1</a>
+								</td>
+							</tr>
+							<tr>
+								<td>Retorna um número como um número</td>
+								<td>valueOf();</td>
+								<td>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_number_valueof" target="_blank">Exemplo 1</a>
+								</td>
+							</tr>
+						</table>
+					</p>
+
+				</font>
+			</section>
+
+			<section>
+				<h2>Numbers e Number Methods</h2>
+				<font size="6em;">
+					<p>Métodos e propriedades dos numbers:
+						<table class="table">
+							<tr>
+								<th>Descrição</th>
+								<th>Comando</th>
+								<th style="width:100px;">Exemplo</th>
+							</tr>
+							<tr>
+								<td>Converte variáveis Javascript em números</td>
+								<td>Number();</td>
+								<td>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_global_number" target="_blank">Exemplo 1</a><br>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_global_number_date" target="_blank">Exemplo 2</a>
+								</td>
+							</tr>
+							<tr>
+								<td>Analisa uma string e retorna um número inteiro</td>
+								<td>parseInt();</td>
+								<td>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_global_parseint" target="_blank">Exemplo 1</a>
+								</td>
+							</tr>
+							<tr>
+								<td>Analisa uma string e retorna um número em ponto flutuante</td>
+								<td>parseFloat();</td>
+								<td>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_global_parsefloat" target="_blank">Exemplo 1</a>
+								</td>
+							</tr>
+							<tr>
+								<td>Palavra reservara (Not-a-Number) para um número não permitido</td>
+								<td>NaN</td>
+								<td>
+									<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_numbers_divide_string" target="_blank">Exemplo 1</a>
+								</td>
+							</tr>
+						</table>
+					</p>
+
+				</font>
+			</section>
+
+			<section>
+				<h2>E ainda mais Javascript</h2>
+				<p>Arrays</p>
+				<p>Conversão de tipos</p>
+				<p>Comparações</p>
+				<p>Condicionais</p>			
+				<p>Loops</p>
+				<br><p style="font-size: 50%;">Fonte dos códigos dessa aula: <a href="https://www.w3schools.com/">www.w3schools.com</a></p>
+			</section>
+
+			<section>
+				<h2>Arrays</h2>
+				<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_newlines" target="_blank">Criando array</a></p>
+				<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_element" target="_blank">Acessando - Exemplo 1</a></p>
+				<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_element_change" target="_blank">Acessando - Exemplo 2</a></p>
+			</section>
+
+			<section>
+				<h2>Arrays</h2>
+				<p>
+					<ul>
+						<li>Arrays são objetos (typeof = object)</li>
+						<li>Os elementos do array podem ser objetos</li>
+						<li>Javascript não suporta nomes como índices</li>
+						<li>Índices devem SEMPRE ser números</li>
+					</ul>
+				</p>
+			</section>
+
+			<section>
+				<h2>Arrays - Métodos e propriedades</h2>					
+				<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_length" target="_blank">Propriedade length</a></p>
+				<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_add_push" target="_blank">Adicionar elemento - 1</a></p>
+				<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_add" target="_blank">Adicionar elemento - 2</a></p>
+				<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_isarray_method" target="_blank">Determinando o tipo array - 1</a></p>
+				<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_isarray" target="_blank">Determinando o tipo array - 2</a></p>
+				<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_instanceof" target="_blank">Determinando o tipo array - 3</a></p>
+			</section>
+
+			<section>
+				<h2>Arrays - Métodos e propriedades</h2>										
+				
+				<p>Outros métodos...</p>
+				<p>
+					<ul>
+						<li>toString</li>
+						<li>splice</li>
+						<li>concat</li>
+						<li>sort</li>
+						<li>reverse</li>
+						<li>...</li>
+					</ul>
+				</p>
+				<p>Estudem os <a href="https://www.w3schools.com/js/js_array_methods.asp" target="_blank">métodos 1</a> e <a href="https://www.w3schools.com/js/js_array_sort.asp" target="_blank">2</a> para manipulação de arrays</p>
+			</section>
+
+
+			<section>
+				<h2>Conversão de tipos</h2>
+				<table class="table">
+					<tbody><tr>
+					 <th>Original<br>Value</th>
+					 <th>Converted<br>to Number</th>
+					 <th>Converted<br>to String</th>
+					 <th>Converted<br>to Boolean</th>
+					 <th style="width:20%">Try it</th>
+					</tr>
+					<tr>
+					 <td>false</td>
+					 <td>0</td>
+					 <td>"false"</td>
+					 <td>false</td>
+					 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_false" target="_blank">Try it »</a></td>
+					</tr>
+					<tr>
+					 <td>true</td>
+					 <td>1</td>
+					 <td>"true"</td>
+					 <td>true</td>
+					 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_true" target="_blank">Try it »</a></td>
+					</tr>
+					<tr>
+					 <td>0</td>
+					 <td>0</td>
+					 <td>"0"</td>
+					 <td>false</td>
+					 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_number_0" target="_blank">Try it »</a></td>
+					</tr>
+					<tr>
+					 <td>1</td>
+					 <td>1</td>
+					 <td>"1"</td>
+					 <td>true</td>
+					 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_number_1" target="_blank">Try it »</a></td>
+					</tr>
+					<tr>
+					 <td>"0"</td>
+					 <td>0</td>
+					 <td>"0"</td>
+					 <td class="important">true</td>
+					 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_string_0" target="_blank">Try it »</a></td>
+					</tr>
+					<tr>
+					 <td>"000"</td>
+					 <td>0</td>
+					 <td>"000"</td>
+					 <td class="important">true</td>
+					 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_string_000" target="_blank">Try it »</a></td>
+					</tr>
+					<tr>
+					 <td>"1"</td>
+					 <td>1</td>
+					 <td>"1"</td>
+					 <td>true</td>
+					 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_string_1" target="_blank">Try it »</a></td>
+					</tr>
+					<tr>
+						<td>NaN</td>
+						<td>NaN</td>
+						<td>"NaN"</td>
+						<td>false</td>
+						<td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_nan" target="_blank">Try it »</a></td>
+					   </tr>
+					   <tr>
+						<td>Infinity</td>
+						<td>Infinity</td>
+						<td>"Infinity"</td>
+						<td>true</td>
+						<td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_infinity" target="_blank">Try it »</a></td>
+					   </tr>
+					   <tr>
+						<td>-Infinity</td>
+						<td>-Infinity</td>
+						<td>"-Infinity"</td>
+						<td>true</td>
+						<td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_infinity_minus" target="_blank">Try it »</a></td>
+					   </tr>
+					   <tr>
+						<td>""</td>
+						<td class="important">0</td>
+						<td>""</td>
+						<td class="important">false</td>
+						<td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_string_empty" target="_blank">Try it »</a></td>
+					   </tr>
+				</tbody></table>					
+			</section>
+
+			<section>
+				<h2>Conversão de tipos</h2>
+				<table class="table">
+					<tr>
+						<th>Original<br>Value</th>
+						<th>Converted<br>to Number</th>
+						<th>Converted<br>to String</th>
+						<th>Converted<br>to Boolean</th>
+						<th style="width:20%">Try it</th>
+					</tr>
+					<tr>
+					 <td>"20"</td>
+					 <td>20</td>
+					 <td>"20"</td>
+					 <td>true</td>
+					 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_string_number" target="_blank">Try it »</a></td>
+					</tr>
+					<tr>
+					 <td>"twenty"</td>
+					 <td>NaN</td>
+					 <td>"twenty"</td>
+					 <td>true</td>
+					 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_string_text" target="_blank">Try it »</a></td>
+					</tr>
+					<tr>
+					 <td>[ ]</td>
+					 <td class="important">0</td>
+					 <td>""</td>
+					 <td>true</td>
+					 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_array_empty" target="_blank">Try it »</a></td>
+					</tr>
+					<tr>
+					 <td>[20]</td>
+					 <td class="important">20</td>
+					 <td>"20"</td>
+					 <td>true</td>
+					 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_array_one_number" target="_blank">Try it »</a></td>
+					</tr>
+					<tr>
+					 <td>[10,20]</td>
+					 <td>NaN</td>
+					 <td>"10,20"</td>
+					 <td>true</td>
+					 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_array_two_numbers" target="_blank">Try it »</a></td>
+					</tr>
+					<tr>
+					 <td>["twenty"]</td>
+					 <td>NaN</td>
+					 <td>"twenty"</td>
+					 <td>true</td>
+					 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_array_one_string" target="_blank">Try it »</a></td>
+					</tr>
+					<tr>
+					 <td>["ten","twenty"]</td>
+					 <td>NaN</td>
+					 <td>"ten,twenty"</td>
+					 <td>true</td>
+					 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_array_two_strings" target="_blank">Try it »</a></td>
+					</tr>
+					<tr>
+					 <td>function(){}</td>
+					 <td>NaN</td>
+					 <td>"function(){}"</td>
+					 <td>true</td>
+					 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_function" target="_blank">Try it »</a></td>
+					</tr>
+					<tr>
+					 <td>{ }</td>
+					 <td>NaN</td>
+					 <td>"[object Object]"</td>
+					 <td>true</td>
+					 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_object" target="_blank">Try it »</a></td>
+					</tr>
+					<tr>
+					 <td>null</td>
+					 <td class="important">0</td>
+					 <td>"null"</td>
+					 <td>false</td>
+					 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_null" target="_blank">Try it »</a></td>
+					</tr>
+					<tr>
+					 <td>undefined</td>
+					 <td>NaN</td>
+					 <td>"undefined"</td>
+					 <td>false</td>
+					 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_undefined" target="_blank">Try it »</a></td>
+					</tr>
+				   </tbody></table>
+			</section>
+
+
+			<section>
+				<h2>Operadores de comparação</h2>
+				<table class="table">
+					<tbody><tr>
+					<th style="width:12%">Operator</th>
+					<th>Description</th>
+					<th>Comparing</th>
+					<th>Returns</th>
+					<th style="width:10%">Try it</th>
+					</tr>
+					<tr>
+					<td rowspan="3">==</td>
+					<td rowspan="3">equal to</td>
+					<td>x == 8</td>
+					<td>false</td>
+					<td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison1">Try it »</a></td> 
+					</tr>
+					<tr>
+					<td>x == 5</td>
+					<td>true</td>
+					<td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison2">Try it »</a></td> 
+					</tr>
+					<tr>
+					<td>x == "5"</td>
+					<td>true</td>
+					<td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison12">Try it »</a></td> 
+					</tr>
+					<tr>
+					<td rowspan="2">===</td>
+					<td rowspan="2">equal value and equal type</td>
+					<td>x === 5</td>
+					<td>true</td>
+					<td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison4">Try it »</a></td>
+					</tr>
+					<tr>
+					<td>x === "5"</td>
+					<td>false</td>
+					<td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison3">Try it »</a></td>
+					</tr>
+					<tr>
+					<td>!=</td>
+					<td>not equal</td>
+					<td>x != 8</td>
+					<td>true</td>
+					<td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison5">Try it »</a></td>
+					</tr>
+					<tr >
+					<td rowspan="3">!==</td>
+					<td rowspan="3">not equal value or not equal type</td>
+					<td>x !== 5</td>
+					<td>false</td>
+					<td>
+					<a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison7" target="_blank">Try it »</a></td>
+					</tr>
+					<tr >
+					<td>x !== "5"</td>
+					<td>true</td>
+					<td>
+					<a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison6" target="_blank">Try it »</a></td>
+					</tr>
+					<tr >
+					<td>x !== 8</td>
+					<td>true</td>
+					<td>
+					<a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison13" target="_blank">Try it »</a></td>
+					</tr>
+					<tr >
+					<td>&gt;</td>
+					<td>greater than</td>
+					<td>x &gt; 8</td>
+					<td>false</td>
+					<td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison8">Try it »</a></td>
+					</tr>
+					<tr>
+					<td>&lt;</td>
+					<td>less than</td>
+					<td>x &lt; 8</td>
+					<td>true</td>
+					<td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison9">Try it »</a></td>
+					</tr>
+					<tr>
+					<td>&gt;=</td>
+					<td>greater than or equal to</td>
+					<td>x &gt;= 8</td>
+					<td>false</td>
+					<td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison10">Try it »</a></td>
+					</tr>
+					<tr>
+					<td>&lt;=</td>
+					<td>less than or equal to</td>
+					<td>x &lt;= 8</td>
+					<td>true</td>
+					<td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison11">Try it »</a></td>
+					</tr>
+					</tbody></table>
+			</section>
+
+			<section>
+				<h2>Operadores lógicos</h2>
+				<table class="table">
+					<tbody><tr>
+					<th style="width:12%">Operator</th>
+					<th>Description</th>
+					<th>Example</th>
+					<th style="width:10%">Try it</th>
+					</tr>
+					<tr>
+					<td>&amp;&amp;</td>
+					<td>and</td>
+					<td> (x &lt; 10 &amp;&amp; y &gt; 1) is true</td>
+					<td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison_and">Try it »</a></td>
+					</tr>
+					<tr>
+					<td>||</td>
+					<td>or</td>
+					<td>(x == 5 || y == 5) is false</td>
+					<td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison_or">Try it »</a></td>
+					</tr>
+					<tr>
+					<td>!</td>
+					<td>not</td>
+					<td> !(x == y) is true</td>
+					<td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison_not">Try it »</a></td>
+					</tr>
+					</tbody></table>
+					<p>Comparação ternária: <a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison" target="_blank">Exemplo</a></p>
+			</section>
+
+			<section>
+				<h2>Condicionais</h2>
+				<ul style="font-size: .65em;">
+					<li>
+						<span class="fontOrange"><b>IF</b></span>: Se verdade, especifica bloco de código a ser executado
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_ifthen" target="_blank">Exemplo IF</a>
+					</li>
+					<li>
+						<span class="fontOrange"><b>ELSE</b></span>: Se falso, especifica bloco de código a ser executado
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_ifthenelse" target="_blank">Exemplo ELSE</a>
+					</li>
+					<li>
+						<span class="fontOrange"><b>ELSE...IF</b></span>: Especifica uma nova condição para teste se a primeira for falsa
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_elseif" target="_blank">Exemplo ELSE...IF</a>
+					</li>
+					<li>
+						<span class="fontOrange"><b>SWITCH</b></span>: Especifica várias alternativas de blocos de código a serem executados
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_switch3" target="_blank">Exemplo SWITCH</a>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Loops</h2>
+				<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_loop_for_om2" target="_blank">Exemplo FOR</a></p>
+				<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_object_for_in" target="_blank">Exemplo FOR/IN</a></p>
+				<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_object_for_of" target="_blank">Exemplo FOR/OF</a></p>
+				<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_while" target="_blank">Exemplo WHILE</a></p>
+				<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_dowhile" target="_blank">Exemplo DO WHILE</a></p>
+			</section>
+
+			<section>
+				<h2>Próxima aula teórica...</h2>
+				<p class="fragment">PHP</p>
+			</section>
+
+			<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+				<h2 class="fragment">Até semana que vem...</h2>
+			</section>
+
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--#####################################################################################################-->
+	<!--#####################################################################################################-->
+	<!--### DAQUI PRÁ FRENTE NÃO MODIFICAR ##################################################################-->
+	<!--#####################################################################################################-->
+	<!--#####################################################################################################-->
+	<script src="js/reveal.js"></script>
+
+	<script>
+
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			center: true,
+			hash: true,
+
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'plugin/highlight/highlight.js' },
+				{ src: 'plugin/search/search.js', async: true },
+				{ src: 'plugin/zoom-js/zoom.js', async: true },
+				{ src: 'plugin/notes/notes.js', async: true }
+			]
+		});
+
+	</script>
+
+</body>
+
+</html>

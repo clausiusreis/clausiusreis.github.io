@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>SIN 143</title>
+
+		<meta name="description" content="Aulas de SIN143">
+		<meta name="author" content="Clausius Duque Reis">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/league.css" id="theme">
+
+		<style>
+			.fontOrange {
+				color: orange;
+			}
+		</style>
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>SIN 143</h1>
+					<h3>Laboratório de programação</h3>
+					<h3>Aula 05</h3>
+					<h4>CSS</h4>
+					<p>
+						<small>Prof. <a href="mailto://clausius@uv.br">Clausius Reis</a> (clausius@ufv.br) - LAE 279</small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Introdução ao CSS</h2>			
+					<p>Cascading Style Sheets (CSS) é usado para aplicar estilos sobre páginas Web. Pode ser utilizado de três formas:<br>
+						<ul>
+							<li>Interno às tags HTML</li>	
+							<li>Dentro das tags &lt;style&gt;...&lt;/style&gt;</li>
+							<li>Em arquivos externos.</li>
+						</ul>
+					</p>
+				</section>
+
+				<section>
+					<h2>Linguagens de estilos</h2>
+					<p>Linguagens de estilo, ou de folhas de estilo, é um mecanismo de expressar de forma estruturada o estilo visual de uma página Web. 
+						Seu grande benefício é a separação entre o conteúdo e a formatação visual, permitindo que designers possam modificar a <span style="color: orange;">"identidade visual"</span>
+						das páginas sem o risco de alterar o conteúdo das páginas.
+					</p>
+				</section>
+
+				<section>
+					<h2>Sintáxe básica CSS</h2>
+					<img data-src="./images/selector.gif">
+					<p style="font-size: 50%;">Fonte da imagem: <a href="https://www.w3schools.com/">www.w3schools.com</a></p>
+				</section>
+
+				<section>
+					<h2>CSS</h2>
+					<!-- <p class="fragment">basics</p> -->
+					<p>Selector</p>
+					<p>Como usar: interno, externo, inline</p>
+					<p>Colors</p>
+					<p>Backgrounds</p>
+					<p>Opacity</p>
+					<br><p style="font-size: 50%;">Fonte dos códigos dessa aula: <a href="https://www.w3schools.com/">www.w3schools.com</a></p>
+				</section>
+
+				<section>
+					<h2>Selector</h2>
+					<p>É possível selecionar elementos do HTML pelo seu nome</p>
+					<p>
+						<ul>
+							<li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_syntax_element" target="_blank">Seleção de elemento</a></li>
+							<li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_syntax_id" target="_blank">Seleção de ID</a></li>
+							<li>Seleção de classe</li>
+							<ul>
+								<li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_syntax_class" target="_blank">Classe <span style="color: orange;">.center</span></a></li>
+								<li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_syntax_element_class" target="_blank">Elementos <span style="color: orange;">p</span> com classe <span style="color: orange;">.center</span></a></li>
+								<li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_syntax_element_class2" target="_blank">Múltiplas classes</a></li>
+							</ul>
+							<li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_grouping" target="_blank">Agrupamento de seleções</a></li>
+						</ul>
+					</p>
+				</section>
+
+				<section>
+					<h2>Como usar: interno, externo, inline</h2>
+					<ul>
+						<li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_howto_inline" target="_blank">Inline</a></li>						
+						<li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_howto_internal" target="_blank">Interno</a></li>
+						<li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_howto_external" target="_blank">Externo</a></li>
+					</ul>
+					<p class="fragment"><span style="color: orange;">IMPORTANTE:</span> Caso existam múltiplas definições, a última será utilizada.</p>
+				</section>
+
+				<section>
+					<h2>Colors</h2>
+					<ul>
+						<li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_color_background" target="_blank">Background color</a></li>
+						<li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_color_text" target="_blank">Text color</a></li>
+						<li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_color_border" target="_blank">Border color</a></li>
+						<li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_color_values" target="_blank">Formato de valores</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Backgrounds</h2>
+					<ul>
+						<li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_background-color_body" target="_blank">Background color</a></li>
+						<!-- <li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_background-image_bad" target="_blank">Background image</a></li> -->
+						<li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_background-image_gradient1" target="_blank">Background background image</a></li>
+						<li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_background-image_gradient2" target="_blank">Background repeat image horizontal</a></li>
+						<li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_background-image_norepeat" target="_blank">Background no repeat image</a></li>
+						<li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_background-image_position" target="_blank">Background no repeat image position</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Opacity</h2>
+					<ul>
+						<li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_background_opacity" target="_blank">Propriedade opacity</a></li>
+						<li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_background_opacity2" target="_blank">RGBA</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Próxima aula</h2>
+					<p class="fragment">Mais CSS...</p>
+				</section>
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--#####################################################################################################-->
+<!--#####################################################################################################-->
+<!--### DAQUI PRÁ FRENTE NÃO MODIFICAR ##################################################################-->
+<!--#####################################################################################################-->
+<!--#####################################################################################################-->
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

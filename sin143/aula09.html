@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>SIN 143</title>
+
+	<meta name="description" content="Aulas de SIN143">
+	<meta name="author" content="Clausius Duque Reis">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/league.css" id="theme">
+
+	<style>
+		.fontOrange {
+			color: orange;
+		}
+	</style>
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+	<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section>
+				<h1>SIN 143</h1>
+				<h3>Laboratório de programação</h3>
+				<h3>Aula 09</h3>
+				<h4>Javascript</h4>
+				<p>
+					<small>Prof. <a href="mailto://clausius@uv.br">Clausius Reis</a> (clausius@ufv.br) - LAE 279</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>Javascript</h2>
+				<p>O que é o Javascript?</p>
+				<p>O que o Javascript pode fazer?</p>
+				<p>Onde inserir código Javascript?</p>
+				<p>Possíveis saídas</p>
+				<p>Sintaxe</p>
+				<br>
+				<p style="font-size: 50%;">Fonte dos códigos dessa aula: <a
+						href="https://www.w3schools.com/">www.w3schools.com</a></p>
+			</section>
+
+			<section>
+				<h2>Javascript</h2>
+				<p>Comentários</p>
+				<p>Variáveis</p>
+				<p>Aritmética</p>
+				<p>Atribuição</p>
+				<br>
+				<p style="font-size: 50%;">Fonte dos códigos dessa aula: <a
+						href="https://www.w3schools.com/">www.w3schools.com</a></p>
+			</section>
+
+			<section>
+				<h2>O que é Javascript?</h2>
+				<p>Linguagem de programação que torna possível implementar comportamentos complexos em páginas web.
+					É capaz de tornar conteúdos atualizáveis em intervalos de tempo, mapas interativos,
+					gráficos 2D e 3D animados, entre muitas outras aplicações.</p>
+
+				<p>É uma dos três pilares do desenvolvimento web, sendo peça fundamental de tecnologias atuais que
+					se tornaram padrão o mercado.</p>
+			</section>
+
+			<section>
+				<h2>O que o Javascript pode fazer?</h2>
+				<ul>
+					<li>Alterar conteúdo HTML de elementos</li>
+					<li>Alterar valores de atributos</li>
+					<li>Alterar estilos HTML</li>
+					<li>Esconde/Exibir elementos HTML</li>
+					<li>Manipulação de dados</li>
+					<li>Lógica da página</li>
+					<li>Entre muitas outras possibilidades...</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Onde inserir código Javascript?</h2>
+				<p>Dentro das tags <span style="color:orange;">&lt;script&gt;...&lt;/script&gt;</span></p>
+				<p>Em um arquivo externo com o atributo src em <span style="color:orange;">&lt;script&gt;</span><br>
+					<span style="color:orange;">&lt;script</span> src="MyScript.js" <span
+						style="color:orange;">&gt;...&lt;/script&gt;</span>
+				</p>
+				<p>&nbsp;</p>
+				<p>Podem ser inseridas em qualquer lugar do código, mas é importante ficar atendo às boas práticas de
+					programação.</p>
+			</section>
+
+			<section>
+				<h2>Possíveis saídas</h2>
+				<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_output_dom"
+						target="_blank">innerHTML</a></p>
+				<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_output_write"
+						target="_blank">document.write() enquanto HTML é carregado</a></p>
+				<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_output_write_over"
+						target="_blank">document.write() depois de carregar o HTML</a></p>
+			</section>
+
+			<section>
+				<h2>Sintaxe</h2>
+				<table>
+					<tr>
+						<td>Variáveis</td>
+						<td>var x;</td>
+					</tr>
+					<tr>
+						<td>Operadores</td>
+						<td>+ - * / =</td>
+					</tr>
+					<tr>
+						<td>Expressões</td>
+						<td>
+							5 * 10<br>
+							x * 10<br>
+							"John" + " " + "Doe"
+						</td>
+					</tr>
+					<tr>
+						<td>Comentários</td>
+						<td>//<br>/* ... */</td>
+					</tr>
+					<tr>
+						<td>Identificadores</td>
+						<td>Primeiro caracter deve ser uma letra, _ (underscore) ou $ (dólar)</td>
+					</tr>
+				</table>
+
+			</section>
+
+			<section>
+				<h2>Comentários</h2>
+				<p>// ou /* ... */</p>
+				<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comments1" target="_blank">Exemplo
+						1</a></p>
+				<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comments2" target="_blank">Exemplo
+						2</a></p>
+
+			</section>
+
+			<section>
+				<h2>Variáveis</h2>
+				<p>Antes de 2015, <span style="color:orange;">var</span> era a única forma de declarar varáveis, agora
+					também
+					podemos utilizar <span style="color:orange;">const</span> para variáveis que não podem ser
+					alteradas,
+					e <span style="color:orange;">let</span> para variáveis com escopo restrito (private).</p>
+				<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comments2" target="_blank">Teste</a>
+				</p>
+			</section>
+
+			<section>
+				<h2>Aritmética</h2>
+				<table style="font-size: .75em;">
+					<tr>
+						<td>Adição</td>
+						<td>+</td>
+					</tr>
+					<tr>
+						<td>Subtração</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>Multiplicação</td>
+						<td>*</td>
+					</tr>
+					<tr>
+						<td>Exponenciação</td>
+						<td>**</td>
+					</tr>
+					<tr>
+						<td>Divisão</td>
+						<td>/</td>
+					</tr>
+					<tr>
+						<td>Módulo (Resto)</td>
+						<td>%</td>
+					</tr>
+					<tr>
+						<td>Incremento</td>
+						<td>++</td>
+					</tr>
+					<tr>
+						<td>Decremento</td>
+						<td>--</td>
+					</tr>
+					<tr>
+						<td>Expressões</td>
+						<td>(5 * 10) / 2</td>
+					</tr>
+				</table>
+				<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_arithmetic_expressions" target="_blank">Teste</a></p>
+			</section>
+
+			<section>
+				<h2>Atribuição</h2>
+				<table style="font-size: .5em;">
+					<tr>
+						<td>Descrição</td>
+						<th style="width:25%">Operator</th>
+						<th>Example</th>
+						<th>Same As</th>
+					</tr>
+					<tr>
+						<td>Atribuição</td>
+						<td>=</td>
+						<td>x = y</td>
+						<td>x = y</td>
+					</tr>
+					<tr>
+						<td>Adição</td>
+						<td>+=</td>
+						<td>x += y</td>
+						<td>x = x + y</td>
+					</tr>
+					<tr>
+						<td>Subtração</td>
+						<td>-=</td>
+						<td>x -= y</td>
+						<td>x = x - y</td>
+					</tr>
+					<tr>
+						<td>Multiplicação</td>
+						<td>*=</td>
+						<td>x *= y</td>
+						<td>x = x * y</td>
+					</tr>
+					<tr>
+						<td>Divisão</td>
+						<td>/=</td>
+						<td>x /= y</td>
+						<td>x = x / y</td>
+					</tr>
+					<tr>
+						<td>Resto</td>
+						<td>%=</td>
+						<td>x %= y</td>
+						<td>x = x % y</td>
+					</tr>
+					<tr>
+						<td>Bit a bit, desloc. esq.</td>
+						<td>&lt;&lt;=</td>
+						<td>x &lt;&lt;= y</td>
+						<td>x = x &lt;&lt; y</td>
+					</tr>
+					<tr>
+						<td>Bit a bit, desloc. dir.</td>
+						<td>&gt;&gt;=</td>
+						<td>x &gt;&gt;= y</td>
+						<td>x = x &gt;&gt; y</td>
+					</tr>
+					<tr>
+						<td>Bit a bit, desloc. dir. unsigned</td>
+						<td>&gt;&gt;&gt;=</td>
+						<td>x &gt;&gt;&gt;= y</td>
+						<td>x = x &gt;&gt;&gt; y</td>
+					</tr>
+					<tr>
+						<td>AND bit a bit</td>
+						<td>&amp;=</td>
+						<td>x &amp;= y</td>
+						<td>x = x &amp; y</td>
+					</tr>
+					<tr>
+						<td>XOR bit a bit</td>
+						<td>^=</td>
+						<td>x ^= y</td>
+						<td>x = x ^ y</td>
+					</tr>
+					<tr>
+						<td>OR bit a bit</td>
+						<td>|=</td>
+						<td>x |= y</td>
+						<td>x = x | y</td>
+					</tr>
+					<tr>
+						<td>Exponencial</td>
+						<td>**=</td>
+						<td>x **= y</td>
+						<td>x = x ** y</td>
+					</tr>
+				</table>
+				<p><a href="https://www.w3schools.com/js/js_assignment.asp" target="_blank">Exemplos no site do <span style="color:orange;">w3schools</span></a></p>				
+			</section>
+
+			<section>
+				<h2>Próxima aula</h2>
+				<p class="fragment">Mais Javascript...</p>
+			</section>
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--#####################################################################################################-->
+	<!--#####################################################################################################-->
+	<!--### DAQUI PRÁ FRENTE NÃO MODIFICAR ##################################################################-->
+	<!--#####################################################################################################-->
+	<!--#####################################################################################################-->
+	<script src="js/reveal.js"></script>
+
+	<script>
+
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			center: true,
+			hash: true,
+
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'plugin/highlight/highlight.js' },
+				{ src: 'plugin/search/search.js', async: true },
+				{ src: 'plugin/zoom-js/zoom.js', async: true },
+				{ src: 'plugin/notes/notes.js', async: true }
+			]
+		});
+
+	</script>
+
+</body>
+
+</html>

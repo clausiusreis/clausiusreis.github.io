@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>SIN 143</title>
+
+		<meta name="description" content="Aulas de SIN143">
+		<meta name="author" content="Clausius Duque Reis">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/league.css" id="theme">
+
+		<style>
+			.fontOrange {
+				color: orange;
+			}
+		</style>
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<style>
+			.fontOrange {
+				color: orange;
+			}
+
+			.code {
+				background-color: white; 
+				text-align: left; 
+				padding: 5px; 
+				border-radius: 10px; 
+				font-size: .5em; 
+				font-family: Consolas, 'Courier New';
+			}
+
+			.table {				
+				background-color: #444; 
+				text-align: left; 
+				padding: 5px; 
+				border-radius: 10px; 
+				font-size: .4em; 
+				font-family: Consolas, 'Courier New';
+				width: 100%;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>SIN 143</h1>
+					<h3>Laboratório de programação</h3>
+					<h3>Aula 11</h3>
+					<h4>Javascript</h4>
+					<p>
+						<small>Prof. <a href="mailto://clausius@uv.br">Clausius Reis</a> (clausius@ufv.br) - LAE 279</small>
+					</p>
+				</section>
+				
+				<section>
+					<h2>Javascript</h2>
+					<p>Arrays</p>
+					<p>Conversão de tipos</p>
+					<p>Comparações</p>
+					<p>Condicionais</p>			
+					<p>Loops</p>
+					<br><p style="font-size: 50%;">Fonte dos códigos dessa aula: <a href="https://www.w3schools.com/">www.w3schools.com</a></p>
+				</section>
+
+				<section>
+					<h2>Arrays</h2>
+					<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_newlines" target="_blank">Criando array</a></p>
+					<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_element" target="_blank">Acessando - Exemplo 1</a></p>
+					<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_element_change" target="_blank">Acessando - Exemplo 2</a></p>
+				</section>
+
+				<section>
+					<h2>Arrays</h2>
+					<p>
+						<ul>
+							<li>Arrays são objetos (typeof = object)</li>
+							<li>Os elementos do array podem ser objetos</li>
+							<li>Javascript não suporta nomes como índices</li>
+							<li>Índices devem SEMPRE ser números</li>
+						</ul>
+					</p>
+				</section>
+
+				<section>
+					<h2>Arrays - Métodos e propriedades</h2>					
+					<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_length" target="_blank">Propriedade length</a></p>
+					<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_add_push" target="_blank">Adicionar elemento - 1</a></p>
+					<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_add" target="_blank">Adicionar elemento - 2</a></p>
+					<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_isarray_method" target="_blank">Determinando o tipo array - 1</a></p>
+					<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_isarray" target="_blank">Determinando o tipo array - 2</a></p>
+					<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_instanceof" target="_blank">Determinando o tipo array - 3</a></p>
+				</section>
+
+				<section>
+					<h2>Arrays - Métodos e propriedades</h2>										
+					
+					<p>Outros métodos...</p>
+					<p>
+						<ul>
+							<li>toString</li>
+							<li>splice</li>
+							<li>concat</li>
+							<li>sort</li>
+							<li>reverse</li>
+							<li>...</li>
+						</ul>
+					</p>
+					<p>Estudem os <a href="https://www.w3schools.com/js/js_array_methods.asp" target="_blank">métodos 1</a> e <a href="https://www.w3schools.com/js/js_array_sort.asp" target="_blank">2</a> para manipulação de arrays</p>
+				</section>
+
+
+				<section>
+					<h2>Conversão de tipos</h2>
+					<table class="table">
+						<tbody><tr>
+						 <th>Original<br>Value</th>
+						 <th>Converted<br>to Number</th>
+						 <th>Converted<br>to String</th>
+						 <th>Converted<br>to Boolean</th>
+						 <th style="width:20%">Try it</th>
+						</tr>
+						<tr>
+						 <td>false</td>
+						 <td>0</td>
+						 <td>"false"</td>
+						 <td>false</td>
+						 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_false" target="_blank">Try it »</a></td>
+						</tr>
+						<tr>
+						 <td>true</td>
+						 <td>1</td>
+						 <td>"true"</td>
+						 <td>true</td>
+						 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_true" target="_blank">Try it »</a></td>
+						</tr>
+						<tr>
+						 <td>0</td>
+						 <td>0</td>
+						 <td>"0"</td>
+						 <td>false</td>
+						 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_number_0" target="_blank">Try it »</a></td>
+						</tr>
+						<tr>
+						 <td>1</td>
+						 <td>1</td>
+						 <td>"1"</td>
+						 <td>true</td>
+						 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_number_1" target="_blank">Try it »</a></td>
+						</tr>
+						<tr>
+						 <td>"0"</td>
+						 <td>0</td>
+						 <td>"0"</td>
+						 <td class="important">true</td>
+						 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_string_0" target="_blank">Try it »</a></td>
+						</tr>
+						<tr>
+						 <td>"000"</td>
+						 <td>0</td>
+						 <td>"000"</td>
+						 <td class="important">true</td>
+						 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_string_000" target="_blank">Try it »</a></td>
+						</tr>
+						<tr>
+						 <td>"1"</td>
+						 <td>1</td>
+						 <td>"1"</td>
+						 <td>true</td>
+						 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_string_1" target="_blank">Try it »</a></td>
+						</tr>
+						<tr>
+							<td>NaN</td>
+							<td>NaN</td>
+							<td>"NaN"</td>
+							<td>false</td>
+							<td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_nan" target="_blank">Try it »</a></td>
+						   </tr>
+						   <tr>
+							<td>Infinity</td>
+							<td>Infinity</td>
+							<td>"Infinity"</td>
+							<td>true</td>
+							<td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_infinity" target="_blank">Try it »</a></td>
+						   </tr>
+						   <tr>
+							<td>-Infinity</td>
+							<td>-Infinity</td>
+							<td>"-Infinity"</td>
+							<td>true</td>
+							<td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_infinity_minus" target="_blank">Try it »</a></td>
+						   </tr>
+						   <tr>
+							<td>""</td>
+							<td class="important">0</td>
+							<td>""</td>
+							<td class="important">false</td>
+							<td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_string_empty" target="_blank">Try it »</a></td>
+						   </tr>
+					</tbody></table>					
+				</section>
+
+				<section>
+					<h2>Conversão de tipos</h2>
+					<table class="table">
+						<tr>
+							<th>Original<br>Value</th>
+							<th>Converted<br>to Number</th>
+							<th>Converted<br>to String</th>
+							<th>Converted<br>to Boolean</th>
+							<th style="width:20%">Try it</th>
+						</tr>
+						<tr>
+						 <td>"20"</td>
+						 <td>20</td>
+						 <td>"20"</td>
+						 <td>true</td>
+						 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_string_number" target="_blank">Try it »</a></td>
+						</tr>
+						<tr>
+						 <td>"twenty"</td>
+						 <td>NaN</td>
+						 <td>"twenty"</td>
+						 <td>true</td>
+						 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_string_text" target="_blank">Try it »</a></td>
+						</tr>
+						<tr>
+						 <td>[ ]</td>
+						 <td class="important">0</td>
+						 <td>""</td>
+						 <td>true</td>
+						 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_array_empty" target="_blank">Try it »</a></td>
+						</tr>
+						<tr>
+						 <td>[20]</td>
+						 <td class="important">20</td>
+						 <td>"20"</td>
+						 <td>true</td>
+						 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_array_one_number" target="_blank">Try it »</a></td>
+						</tr>
+						<tr>
+						 <td>[10,20]</td>
+						 <td>NaN</td>
+						 <td>"10,20"</td>
+						 <td>true</td>
+						 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_array_two_numbers" target="_blank">Try it »</a></td>
+						</tr>
+						<tr>
+						 <td>["twenty"]</td>
+						 <td>NaN</td>
+						 <td>"twenty"</td>
+						 <td>true</td>
+						 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_array_one_string" target="_blank">Try it »</a></td>
+						</tr>
+						<tr>
+						 <td>["ten","twenty"]</td>
+						 <td>NaN</td>
+						 <td>"ten,twenty"</td>
+						 <td>true</td>
+						 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_array_two_strings" target="_blank">Try it »</a></td>
+						</tr>
+						<tr>
+						 <td>function(){}</td>
+						 <td>NaN</td>
+						 <td>"function(){}"</td>
+						 <td>true</td>
+						 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_function" target="_blank">Try it »</a></td>
+						</tr>
+						<tr>
+						 <td>{ }</td>
+						 <td>NaN</td>
+						 <td>"[object Object]"</td>
+						 <td>true</td>
+						 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_object" target="_blank">Try it »</a></td>
+						</tr>
+						<tr>
+						 <td>null</td>
+						 <td class="important">0</td>
+						 <td>"null"</td>
+						 <td>false</td>
+						 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_null" target="_blank">Try it »</a></td>
+						</tr>
+						<tr>
+						 <td>undefined</td>
+						 <td>NaN</td>
+						 <td>"undefined"</td>
+						 <td>false</td>
+						 <td><a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_type_convert_undefined" target="_blank">Try it »</a></td>
+						</tr>
+					   </tbody></table>
+				</section>
+
+
+				<section>
+					<h2>Operadores de comparação</h2>
+					<table class="table">
+						<tbody><tr>
+						<th style="width:12%">Operator</th>
+						<th>Description</th>
+						<th>Comparing</th>
+						<th>Returns</th>
+						<th style="width:10%">Try it</th>
+						</tr>
+						<tr>
+						<td rowspan="3">==</td>
+						<td rowspan="3">equal to</td>
+						<td>x == 8</td>
+						<td>false</td>
+						<td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison1">Try it »</a></td> 
+						</tr>
+						<tr>
+						<td>x == 5</td>
+						<td>true</td>
+						<td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison2">Try it »</a></td> 
+						</tr>
+						<tr>
+						<td>x == "5"</td>
+						<td>true</td>
+						<td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison12">Try it »</a></td> 
+						</tr>
+						<tr>
+						<td rowspan="2">===</td>
+						<td rowspan="2">equal value and equal type</td>
+						<td>x === 5</td>
+						<td>true</td>
+						<td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison4">Try it »</a></td>
+						</tr>
+						<tr>
+						<td>x === "5"</td>
+						<td>false</td>
+						<td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison3">Try it »</a></td>
+						</tr>
+						<tr>
+						<td>!=</td>
+						<td>not equal</td>
+						<td>x != 8</td>
+						<td>true</td>
+						<td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison5">Try it »</a></td>
+						</tr>
+						<tr >
+						<td rowspan="3">!==</td>
+						<td rowspan="3">not equal value or not equal type</td>
+						<td>x !== 5</td>
+						<td>false</td>
+						<td>
+						<a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison7" target="_blank">Try it »</a></td>
+						</tr>
+						<tr >
+						<td>x !== "5"</td>
+						<td>true</td>
+						<td>
+						<a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison6" target="_blank">Try it »</a></td>
+						</tr>
+						<tr >
+						<td>x !== 8</td>
+						<td>true</td>
+						<td>
+						<a class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison13" target="_blank">Try it »</a></td>
+						</tr>
+						<tr >
+						<td>&gt;</td>
+						<td>greater than</td>
+						<td>x &gt; 8</td>
+						<td>false</td>
+						<td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison8">Try it »</a></td>
+						</tr>
+						<tr>
+						<td>&lt;</td>
+						<td>less than</td>
+						<td>x &lt; 8</td>
+						<td>true</td>
+						<td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison9">Try it »</a></td>
+						</tr>
+						<tr>
+						<td>&gt;=</td>
+						<td>greater than or equal to</td>
+						<td>x &gt;= 8</td>
+						<td>false</td>
+						<td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison10">Try it »</a></td>
+						</tr>
+						<tr>
+						<td>&lt;=</td>
+						<td>less than or equal to</td>
+						<td>x &lt;= 8</td>
+						<td>true</td>
+						<td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison11">Try it »</a></td>
+						</tr>
+						</tbody></table>
+				</section>
+
+				<section>
+					<h2>Operadores lógicos</h2>
+					<table class="table">
+						<tbody><tr>
+						<th style="width:12%">Operator</th>
+						<th>Description</th>
+						<th>Example</th>
+						<th style="width:10%">Try it</th>
+						</tr>
+						<tr>
+						<td>&amp;&amp;</td>
+						<td>and</td>
+						<td> (x &lt; 10 &amp;&amp; y &gt; 1) is true</td>
+						<td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison_and">Try it »</a></td>
+						</tr>
+						<tr>
+						<td>||</td>
+						<td>or</td>
+						<td>(x == 5 || y == 5) is false</td>
+						<td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison_or">Try it »</a></td>
+						</tr>
+						<tr>
+						<td>!</td>
+						<td>not</td>
+						<td> !(x == y) is true</td>
+						<td><a target="_blank" class="w3-btn" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison_not">Try it »</a></td>
+						</tr>
+						</tbody></table>
+						<p>Comparação ternária: <a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_comparison" target="_blank">Exemplo</a></p>
+				</section>
+
+				<section>
+					<h2>Condicionais</h2>
+					<ul style="font-size: .65em;">
+						<li>
+							<span class="fontOrange"><b>IF</b></span>: Se verdade, especifica bloco de código a ser executado
+							<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_ifthen" target="_blank">Exemplo IF</a>
+						</li>
+						<li>
+							<span class="fontOrange"><b>ELSE</b></span>: Se falso, especifica bloco de código a ser executado
+							<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_ifthenelse" target="_blank">Exemplo ELSE</a>
+						</li>
+						<li>
+							<span class="fontOrange"><b>ELSE...IF</b></span>: Especifica uma nova condição para teste se a primeira for falsa
+							<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_elseif" target="_blank">Exemplo ELSE...IF</a>
+						</li>
+						<li>
+							<span class="fontOrange"><b>SWITCH</b></span>: Especifica várias alternativas de blocos de código a serem executados
+							<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_switch3" target="_blank">Exemplo SWITCH</a>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Loops</h2>
+					<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_loop_for_om2" target="_blank">Exemplo FOR</a></p>
+					<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_object_for_in" target="_blank">Exemplo FOR/IN</a></p>
+					<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_object_for_of" target="_blank">Exemplo FOR/OF</a></p>
+					<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_while" target="_blank">Exemplo WHILE</a></p>
+					<p><a href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_dowhile" target="_blank">Exemplo DO WHILE</a></p>
+				</section>
+
+				<section>
+					<h2>Próxima aula</h2>
+					<p class="fragment">PHP</p>
+				</section>
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--#####################################################################################################-->
+<!--#####################################################################################################-->
+<!--### DAQUI PRÁ FRENTE NÃO MODIFICAR ##################################################################-->
+<!--#####################################################################################################-->
+<!--#####################################################################################################-->
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

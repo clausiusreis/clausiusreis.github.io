@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>SIN 143</title>
+
+		<meta name="description" content="Aulas de SIN143">
+		<meta name="author" content="Clausius Duque Reis">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/league.css" id="theme">
+
+		<style>
+			.fontOrange {
+				color: orange;
+			}
+		</style>
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>SIN 143</h1>
+					<h3>Laboratório de programação</h3>
+					<h3>Aula 08</h3>
+					<h4>PHP</h4>
+					<p>
+						<small>Prof. <a href="mailto://clausius@uv.br">Clausius Reis</a> (clausius@ufv.br) - LAE 279</small>
+					</p>
+				</section>
+
+				<section>
+					<h2>PHP</h2>
+					<!-- <p class="fragment">basics</p> -->					
+					<div style="width: 100%; justify-content: center; align-items: center; display: flex;">
+						<div style="float: left; width: 300px;">
+							<p><a href="https://www.w3schools.com/php/php_intro.asp" target="_blank"><span style="color:orange;">Introdução</span></a></p>
+							<p><a href="https://www.w3schools.com/php/php_syntax.asp" target="_blank"><span style="color:orange;">Sintaxe</span></a></p>							
+							<p><a href="https://www.w3schools.com/php/php_variables.asp" target="_blank">Variáveis</a></p>
+							<p><a href="https://www.w3schools.com/php/php_numbers.asp" target="_blank">Números</a></p>
+							<p><a href="https://www.w3schools.com/php/php_string.asp" target="_blank">Strings</a></p>							
+							<p><a href="https://www.w3schools.com/php/php_echo_print.asp" target="_blank">Echo / Print</a></p>							
+						</div>
+						<div style="float: right; width: 300px;">
+							<p><a href="https://www.w3schools.com/php/php_comments.asp" target="_blank">Commentários</a></p>
+							<p><a href="https://www.w3schools.com/php/php_datatypes.asp" target="_blank">Tipo de dados</a></p>
+							<p><a href="https://www.w3schools.com/php/php_math.asp" target="_blank">Math</a></p>
+							<p><a href="https://www.w3schools.com/php/php_constants.asp" target="_blank">Constantes</a></p>
+							<p><a href="https://www.w3schools.com/php/php_operators.asp" target="_blank">Operadores</a></p>
+							<p><a href="https://www.w3schools.com/php/php_includes.asp" target="_blank">Include</a></p>
+						</div>
+						<div style="float: right; width: 300px;">
+							<p><a href="https://www.w3schools.com/php/phptryit.asp?filename=tryphp_if_elseif" target="_blank">If... Else... Elseif</a></p>
+							<p><a href="https://www.w3schools.com/php/phptryit.asp?filename=tryphp_switch" target="_blank">Switch</a></p>
+							<p><a href="https://www.w3schools.com/php/php_looping.asp" target="_blank">Loops</a></p>
+							<p><a href="https://www.w3schools.com/php/phptryit.asp?filename=tryphp_function1" target="_blank">Functions</a></p>
+							<p><a href="https://www.w3schools.com/php/php_arrays.asp" target="_blank">Arrays</a></p>
+							<p><a href="https://www.w3schools.com/php/php_superglobals.asp" target="_blank">Superglobals</a></p>
+						</div>
+					</div>
+					<br><p style="font-size: 50%;">Fonte dos códigos dessa aula: <a href="https://www.w3schools.com/">www.w3schools.com</a></p>
+				</section>
+
+				<section>
+					<h2>Intro and Syntax</h2>
+					<p><b>What is PHP?</b></h3>
+					<ul>
+						<li>PHP é um acrônimo para "PHP: Hypertext Preprocessor"</li>
+						<li>PHP é uma linguagem de script open-source amplamente utilizada</li>
+						<li>Cógidos PHP são executados no lado do servidor</li>
+						<li>PHP é grátis para download e uso</li>
+					</ul>
+				</section>
+				
+				
+				<section>
+					<h2>Sintaxe</h2>
+					<p>Um código PHP inicia com <span style="color:orange">&lt;?php</span> e termina com <span style="color:orange">?&gt;</span>:</p>
+					
+					<img src="images/c1.png">
+				</section>
+
+				<section>
+					<h2>Sintaxe</h2>
+					<p>Um código PHP pode conter elementos HTML, <br>desde que não estejam dentro do <br>espaço delimitado por <span style="color:orange">&lt;?php</span> e <span style="color:orange">?&gt;</span>:</p>
+					
+					<img src="images/c2	.png">
+				</section>
+
+				<section>
+					<h2>Sintaxe</h2>
+					<p>O PHP é case sensitive, tanto para comandos como para variáveis:</p>
+					
+					<img src="images/c3	.png">
+				</section>
+
+				<section>
+					<h2>PHP</h2>
+					<!-- <p class="fragment">basics</p> -->					
+					<div style="width: 100%; justify-content: center; align-items: center; display: flex;">
+						<div style="float: left; width: 300px;">
+							<p><a href="https://www.w3schools.com/php/php_intro.asp" target="_blank"><span style="color:orange;">Introdução</span></a></p>
+							<p><a href="https://www.w3schools.com/php/php_syntax.asp" target="_blank"><span style="color:orange;">Sintaxe</span></a></p>							
+							<p><a href="https://www.w3schools.com/php/php_variables.asp" target="_blank">Variáveis</a></p>
+							<p><a href="https://www.w3schools.com/php/php_numbers.asp" target="_blank">Números</a></p>
+							<p><a href="https://www.w3schools.com/php/php_string.asp" target="_blank">Strings</a></p>							
+							<p><a href="https://www.w3schools.com/php/php_echo_print.asp" target="_blank">Echo / Print</a></p>							
+						</div>
+						<div style="float: right; width: 300px;">
+							<p><a href="https://www.w3schools.com/php/php_comments.asp" target="_blank">Commentários</a></p>
+							<p><a href="https://www.w3schools.com/php/php_datatypes.asp" target="_blank">Tipo de dados</a></p>
+							<p><a href="https://www.w3schools.com/php/php_math.asp" target="_blank">Math</a></p>
+							<p><a href="https://www.w3schools.com/php/php_constants.asp" target="_blank">Constantes</a></p>
+							<p><a href="https://www.w3schools.com/php/php_operators.asp" target="_blank">Operadores</a></p>
+							<p><a href="https://www.w3schools.com/php/php_includes.asp" target="_blank">Include</a></p>
+						</div>
+						<div style="float: right; width: 300px;">
+							<p><a href="https://www.w3schools.com/php/phptryit.asp?filename=tryphp_if_elseif" target="_blank">If... Else... Elseif</a></p>
+							<p><a href="https://www.w3schools.com/php/phptryit.asp?filename=tryphp_switch" target="_blank">Switch</a></p>
+							<p><a href="https://www.w3schools.com/php/php_looping.asp" target="_blank">Loops</a></p>
+							<p><a href="https://www.w3schools.com/php/phptryit.asp?filename=tryphp_function1" target="_blank">Functions</a></p>
+							<p><a href="https://www.w3schools.com/php/php_arrays.asp" target="_blank">Arrays</a></p>
+							<p><a href="https://www.w3schools.com/php/php_superglobals.asp" target="_blank">Superglobals</a></p>
+						</div>
+					</div>
+					<br><p style="font-size: 50%;">Fonte dos códigos dessa aula: <a href="https://www.w3schools.com/">www.w3schools.com</a></p>
+				</section>
+
+				<section>
+					<h2>Próxima aula</h2>
+					<p class="fragment">Mais PHP... formulários.</p>
+				</section>
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--#####################################################################################################-->
+<!--#####################################################################################################-->
+<!--### DAQUI PRÁ FRENTE NÃO MODIFICAR ##################################################################-->
+<!--#####################################################################################################-->
+<!--#####################################################################################################-->
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

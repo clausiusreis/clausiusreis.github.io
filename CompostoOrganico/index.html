@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Seleção de Dados</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .container {
+      background-color: #d0e8ff;
+      border-radius: 20px;
+      padding: 30px;
+      display: flex;
+      gap: 30px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.431);
+      width: 100%;
+      max-width: 1220px;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .column-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .option {
+      margin: 5px 0;
+      padding: 8px 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+      text-align: center;
+      width: 250px;
+      border: 2px solid transparent;
+    }
+
+    .column[data-group="branco"] .option {
+      background-color: white;
+      color: black;
+    }
+
+    .column[data-group="verde"] .option {
+      background-color: #a5d6a7;
+      color: black;
+    }
+
+    .column[data-group="azul"] .option {
+      background-color: #90caf9;
+      color: black;
+    }
+
+    .column[data-group="vermelho"] .option {
+      background-color: #ef9a9a;
+      color: black;
+    }
+
+    .option.selected {
+      border: 2px solid black;
+      font-weight: bold;
+      transform: scale(1.05);
+    }
+
+    .option:hover {
+      opacity: 0.9;
+    }
+
+    .right-columns {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .top-columns {
+      display: flex;
+      gap: 30px;
+      justify-content: flex-start;
+    }
+
+    .extra-inputs {
+      border: 1px solid rgb(126, 161, 210);
+      background-color: rgb(126, 161, 210);
+      border-radius: 10px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+      width: 910px; /* 3 colunas de 250px + 2 espaços de 30px */
+      box-sizing: border-box;
+    }
+
+    .extra-inputs input {
+      padding: 6px 10px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      width: 100%;
+      height: 70px;
+      box-sizing: border-box;
+    }
+
+    input[type="text"] {
+      text-align: center;
+      font-size: 18px;
+    }
+
+    #campo2 {
+        border-radius: 6px;
+        padding: 12px 10px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        resize: none;
+        width: 100%;
+        height: 70px;
+        box-sizing: border-box;
+    }
+
+    .pagina {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .titulo {
+        text-align: center;
+        margin-bottom: 20px;
+        background-color: #d0e8ff;
+        border-radius: 20px;
+        padding: 30px;
+        display: flex;
+        gap: 30px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.431);
+    }
+
+    .titulo h1 {
+        font-size: 24px;
+        margin: 0;
+        color: #333;
+    }
+  </style>
+</head>
+<body>
+<div class="pagina">
+    <div class="titulo">
+    <h1>NOMENCLATURA DOS COMPOSTOS ORGÂNICOS</h1>
+    </div>
+
+  <div class="container">
+    <!-- Coluna 1 -->
+    <div class="column" data-group="branco">
+      <div class="column-title">Dado Branco</div>
+      <div class="option">1</div>
+      <div class="option">2</div>
+      <div class="option">3</div>
+      <div class="option">4</div>
+      <div class="option">5</div>
+      <div class="option">6</div>
+      <div class="option">7</div>
+      <div class="option">8</div>
+      <div class="option">9</div>
+      <div class="option">10</div>
+      <div class="option">11</div>
+      <div class="option">12</div>
+    </div>
+
+    <!-- Colunas 2-3-4 + Inputs -->
+    <div class="right-columns">
+      <!-- Colunas 2 a 4 -->
+      <div class="top-columns">
+        <div class="column" data-group="verde">
+          <div class="column-title">Dado Verde</div>
+          <div class="option">an e aberta</div>
+          <div class="option">an e fechada</div>
+          <div class="option">en e aberta</div>
+          <div class="option">en e fechada</div>
+          <div class="option">in e aberta</div>
+          <div class="option">in e fechada</div>
+        </div>
+
+        <div class="column" data-group="azul">
+          <div class="column-title">Dado Azul</div>
+          <div class="option">CxHy (Hidrocarboneto)</div>
+          <div class="option">C=O (Aldeído/Cetona)</div>
+          <div class="option">-OH (Álcool/Enol/Fenol)</div>
+          <div class="option">-O- (Éter)</div>
+          <div class="option">-COO- (Ácido Carboxílico/Éster)</div>
+          <div class="option">N (Amina/Amida)</div>
+        </div>
+
+        <div class="column" data-group="vermelho">
+          <div class="column-title">Dado Vermelho</div>
+          <div class="option">Não se aplica a rodada 1</div>
+          <div class="option">Metil</div>
+          <div class="option">Etil</div>
+          <div class="option">Dimetil</div>
+          <div class="option">Isopropil</div>
+          <div class="option">Tercbutil</div>
+          <div class="option">Sem ramificação</div>
+        </div>
+      </div>
+
+      <!-- Campos de texto -->
+      <div class="extra-inputs">
+        <b>Concatenar</b>
+        <input type="text" id="campo1" placeholder="- - -">
+        <br>
+        <b>Resultado</b>
+        <!-- <input type="text" id="campo2" placeholder="- - -"> -->
+        <textarea id="campo2" placeholder="- - -" rows="2" wrap="soft"></textarea>
+      </div>
+    </div>
+  </div>
+</div>
+  <script>
+  let tabela = [];
+
+  // Função para carregar e parsear o CSV
+  function carregarCSV() {
+    fetch('compostos.csv')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Erro ao carregar o CSV.');
+        }
+        return response.text();
+      })
+      .then(texto => {
+        tabela = parseCSV(texto);
+      })
+      .catch(error => {
+        console.error('Erro ao carregar compostos.csv:', error);
+      });
+  }
+
+  // Converte CSV para array de objetos
+  function parseCSV(data) {
+    const linhas = data.trim().split('\n');
+    const cabecalho = linhas[0].split('|');
+    return linhas.slice(1).map(linha => {
+      const valores = linha.split('|');
+      const obj = {};
+      cabecalho.forEach((campo, i) => {
+        obj[campo.trim()] = valores[i] ? valores[i].trim() : '';
+      });
+      return obj;
+    });
+  }
+
+  function atualizarCampoTexto() {
+    // Obter os elementos das colunas 2, 3 e 4
+    const colunas = ['branco', 'verde', 'azul', 'vermelho'];
+    const selecoes = colunas.map(grupo => {
+      const selecionado = document.querySelector(`.column[data-group="${grupo}"] .option.selected`);
+      return selecionado ? selecionado.textContent : '';
+    });
+
+    const campo1 = document.getElementById('campo1');
+    if (campo1) {
+      campo1.value = selecoes.join('   ');
+    }
+
+    if (selecoes.every(v => v !== '')) {
+      const [branco, verde, azul, vermelho] = selecoes;
+
+      const resultado = tabela.find(linha =>
+        linha['DadoBranco'] === branco &&
+        linha['DadoVerde'] === verde &&
+        linha['DadoAzul'] === azul &&
+        linha['DadoVermelho'] === vermelho
+      );
+
+      console.log(resultado);
+
+      const campo2 = document.getElementById('campo2');
+      if (campo2) {
+        campo2.value = resultado ? resultado['Nomenclatura'] : 'Não definido';
+      }
+    }
+  }
+
+  document.querySelectorAll('.column').forEach(coluna => {
+      coluna.addEventListener('click', e => {
+        if (e.target.classList.contains('option')) {
+          coluna.querySelectorAll('.option').forEach(op => op.classList.remove('selected'));
+          e.target.classList.add('selected');
+          atualizarCampoTexto(); // atualiza sempre que uma seleção é feita
+        }
+      });
+    });
+
+  // Carrega o CSV ao iniciar a página
+  window.addEventListener('DOMContentLoaded', carregarCSV);
+  </script>
+
+</body>
+</html>
